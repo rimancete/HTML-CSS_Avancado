@@ -6,15 +6,45 @@
     <title>Osvaldo Domingos Costa Junior</title>
     <meta name="author" content="Osvaldo Costa">
     <meta name="description" content="Currículo Osvaldo Domingos Costa Junior">
-    <meta name="keywords" content="html5, css, tecnologia, currículo">
+    <meta name="keywords" content="html5, css, tecnologia, currículo, osvaldo domingos costa junior">
     <style>
         body{
             width: 85%;
             margin: auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* Obs 1 - Definir fonte da página*/
+            color: #444;
+            /* Obs 3 - Definir cor padrão do texto da página*/
         }
         h1{
-            background: #FFCA72;
+            background-color: #FFCA72;
+            color: #B74315;
+            text-align: center;
         }
+        h2{
+            text-align: left;
+            background-color: #DB9192;
+            color: #FF0000;
+            border-bottom: solid 2px #FF0000;
+            padding: 3px;
+        }
+        .formacao{
+            margin-top: -1.3%;
+        }
+        ul{
+            padding-left: 0;
+            list-style-position: inside;
+            /* Obs 4 - Corrigingo margem
+            Zerando padding esquerdo e colocando a lista dentro desse pading*/
+        }
+        a:link{
+            color: #1700F3;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -25,55 +55,56 @@
         <p>Front-End Developer, Desenvolvedor Front-End. WebDesigner</p>
     
     <h2>Experiência profissional</h2>
-        <p>Raízen Energia - 09/12 até 03/17</p>  
-            <p>Arquiteto TI / Projetos - 3CON | 2015-2017</p>
+        <h3><a href="https://www.raizen.com.br/" target="_blank"> Raízen Energia</a> - 09/12 até 03/17</h3>  
+            <h4><strong>Arquiteto TI / Projetos</strong> - 3CON | <i>2015-2017</i></h4>
                 <p>Planejamento(Arquitetura) e execução de projetos de infra. Arquitetura de infra para implantação de sistemas. Arquitetura e implantação de novas tecnologias no cliente. Apoio técnico para solução e identificação de causa raíz de incidentes.</p>
             
-            <p>Analista de sistemas - Essence IT | 2014-2015</p>
+            <h4><strong>Analista de sistemas</strong> - Essence IT | <i>2014-2015</i></h4>
                 <p>Implantação, suporte de sistemas para o setor agrícola, cana de açúcar, incluindo automação de processos. Levantamento de Requisitos, testes de regressão, RDMs, implantação local e remota, suporte a usuários, atendimento de chamados de sistema, treinamentos, documentação técnica / processos.</p>
 
-            <p>Analista de Infraestrutura(Produção) - Essence IT | 2012-2014</p>
+            <h4><strong>Analista de Infraestrutura(Produção)</strong> - Essence IT | 2012-2014</h4>
                 <p>Monitoramento e administração de Data Centers, Redes CISCO, Servidores Microsoft, UNIX, LINUX, Banco(SQL/Oracle);<br>
                 Administração de backup via Data Protector; Atendimento de chamados utilizando a ferramenta Footprints; Administração de usuários utilizando Active Directory e ARS, e de e-mail utilizando Exchange da Microsoft;<br>
                 Administração Telefonia Siemens / Avaya; Criação e execuções de demandas (RDM), incluindo Banco de Dados, SAP, Infra e Sistemas.</p>
+            <!-- Obs 2 - Cargos alterados de "p" para "h4"-->
         
-        <p>Tempo Veículos - Analista de Suporte | 2010-2012</p>
-            <p>Suporte Nível 2 aos usuários de 3 unidades da empresa, incluindo plantão; Administração de DCs, incluindo servidores Windows e derivados UNIX / LINUX, telecom. Suporte avançado ao Office, Windows, e ERP Procyon Siare.</p>
+        <h3><a href="http://www.tempoveiculos.com.br/" target="_blank"> Tempo Veículos</a> - 2010-2012 </h3>
+            <h4>Analista de Suporte</h4>
+                <p>Suporte Nível 2 aos usuários de 3 unidades da empresa, incluindo plantão; Administração de DCs, incluindo servidores Windows e derivados UNIX / LINUX, telecom. Suporte avançado ao Office, Windows, e ERP Procyon Siare.</p>
 
-        <p>Textil Beretta Rossi - Administrador de Rede | 2009-2010</p>
-            <p>Suporte Nível 2 aos usuários da empresa; Manutenção em Hardware, incluindo impressoras; Suporte ao pacote Office, Windows, ERP Microdata; Implantação de melhoria na rede LAN e internet através da infraestrutura da empresa.</p>
+        <h3>Textil Beretta Rossi - 2009-2010</h3>
+            <h4><Administrador de Rede</h4>
+                <p>Suporte Nível 2 aos usuários da empresa; Manutenção em Hardware, incluindo impressoras; Suporte ao pacote Office, Windows, ERP Microdata; Implantação de melhoria na rede LAN e internet através da infraestrutura da empresa.</p>
         
-        <p>IBM - Administrador de Suporte(Help Desk) | 2005-2006</p>
-            <p>Suporte Nível 1 de processos e TI; Criação e atualização dos procedimentos pertinentes aos atendimentos.</p>
+        <h3><a href="https://www.ibm.com/br-pt" target="_blank"> IBM</a> - 2005-2006</h3>
+            <h4>Analista de Suporte(Help Desk)</h4>
+                <p>Suporte Nível 1 de processos e TI; Criação e atualização dos procedimentos pertinentes aos atendimentos.</p>
+            <!-- Obs 2 - Cargos alterados de "p" para "h4"-->
     
     <h2>Formação</h2>
 
-        <p> Web Dev (HTML5, CSS, Javascript)<br>
-        2020<br>
+        <h3>Web Dev (HTML5, CSS, Javascript)</h3>
+        <p class="formacao">2020<br>
         serfrontend(Udemy)</p>
 
-        <p>MBA em Arquitetura de TI<br>
-        2016-2017(Trancado)<br>
+        <h3>MBA em Arquitetura de TI</h3>
+        <p class="formacao"> 2016-2017(Trancado)<br>
         Metrocamp</p>
 
-        <p>Tecnologia em Redes<br>
-        2010-2011<br>
+        <h3>Tecnologia em Redes</h3>
+        <p class="formacao">2010-2011<br>
         Unip Limeira</p>
 
-        <p>Gestão de TI<br>
-        2015<br>
+        <h3>Gestão de TI</h3>
+        <p class="formacao"> 2015<br>
         FGV</p>
 
-        <p>Gestão de TI<br>
-        2015<br>
-        FGV</p>
-
-        <p>Técnico de Informática<br>
-        2004-2006<br>
+        <h3>Técnico de Informática</h3>
+        <p class="formacao">2004-2006<br>
         Colégio Politec Americana</p>
 
-        <p>Complementares: Inglês avançado, Segurança da Informação, SAP, Administração de Banco de Dados Oracle/SQL, Sharepoint<br>
-        2012-2017<br>
+        <h3>Complementares: Inglês avançado, Segurança da Informação, SAP, Administração de Banco de Dados Oracle/SQL, Sharepoint</h3>
+        <p class="formacao">2012-2017<br>
         Online, Workshops</p>
     
     <h2>Conhecimento adicionais</h2>
