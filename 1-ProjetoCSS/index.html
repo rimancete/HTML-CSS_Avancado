@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Web Fundamentos</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Curso Web Design Fundamentos">
+    <meta name="keywords" content="html5, ccs, css3, javascript, web design, designer, front-end, tecnologia">
+</head>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #CCCCCC
+    }
+    a{color: white;}
+    
+    .cabecalho{
+        width: 90%;
+        background-image: url(img/bg-3.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+    .menu{
+        text-transform: uppercase;
+        text-align: right;
+        list-style-type: none;
+    }
+    .aprenda{
+
+    }
+
+</style>
+<body>
+    <div id="principal">
+        <!--Obs1: Tag div para facilitar centralização do conteúdo da página -->
+        <header class="cabecalho">
+            <nav>
+                <ul>
+                    <li class="menu"><a href="index.html" target="_blank"> Início</a></li>
+                    <li class="menu"><a href="#" target="_blank"> Quem sou seu</a></li>
+                    <li class="menu"><a href="#" target="_blank"> Contato</a></li>
+                </ul>
+            </nav>
+            <div>
+            <!--Obs1: Tag div para facilitar centralização do conteúdo da página -->
+                <h1>Curso Web Fundamentos</h1>
+                <p class="aprenda">Aprenda HTML, CSS e Javascript</p>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <div id="card">
+                    <img src="img/card_01.png" alt="Seletores">
+                    <p>Seletores</p>
+                </div>
+                <div id="card">
+                    <img src="img/card_02.jpg" alt="Posicionamento">
+                    <p>Posicionamento</p>
+                </div>
+                <div id="card">
+                    <img src="img/card_03.jpg" alt="Fontes e ícones">
+                    <p>Fontes e Ícones</p>
+                </div>
+            </section>
+            <section>
+                <article>
+                    <header><h2>Título</h2></header>
+                    <p>Primeiro parágrafo de exemplo</p>
+                    <p>Segundo parágrafo de exemplo</p>
+                 </article>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Copyright &copy; 2020</p>
+        </footer>
+
+    </div>
+</body>
+</html>
