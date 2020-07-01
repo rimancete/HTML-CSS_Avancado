@@ -1,0 +1,71 @@
+    body{
+        font-family: arial, sans-serif;
+        background-color: #CCCCCC;
+        margin: 0;
+    }
+    .cabecalho{
+        height: 500px;
+        background-image: url(../img/bg-3.jpg);
+        background-position:right center;
+        background-size:cover;
+    }
+    .cabecalho li{
+        text-transform: uppercase;
+        text-align: right;
+        list-style-type: none;
+    }
+    a{color: white;}  
+    .c-texto{
+        text-align: center;
+        margin: 7%;
+    }
+    .c-texto h1{
+        text-transform: uppercase;
+        font-size: 46px;
+        color: white;
+        text-shadow: 3px 3px 3px #333;
+    }
+    .c-texto p{
+        background-color: #464646;
+        color: white;
+        border-bottom: solid 2px white;
+        width: 30%;
+        padding: 1%;
+        margin: auto auto 5% auto;
+    }
+    main{
+        width: 80%;
+        margin: auto;    
+    }
+    .conteudo{
+        background-color: white;
+        padding: 10px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    article h2{
+        margin: 2px;
+        padding: 1%;
+        font-size: 30px;
+        color: black;
+        background-color: #EEEEEE;
+        border-bottom: solid 2px #CCCCCC;
+    }
+    article p{
+        font-size: 20px;
+    }
+    #card p{
+        color: white;
+        background-color: #464646;
+        text-transform: uppercase;
+        padding: 1%;
+        display: block;
+    }
+    footer{
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        background-color: #6B6C68;
+        text-shadow: 3px 3px #4F4643;
+        padding: 2%;
+    }

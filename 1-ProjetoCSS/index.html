@@ -7,66 +7,43 @@
     <meta name="author" content="Osvaldo Costa">
     <meta name="description" content="Curso Web Design Fundamentos">
     <meta name="keywords" content="html5, ccs, css3, javascript, web design, designer, front-end, tecnologia">
+    <link rel="stylesheet" href="CSS/estilo.css">
 </head>
-<style>
-    body{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: #CCCCCC
-    }
-    a{color: white;}
-    
-    .cabecalho{
-        width: 90%;
-        background-image: url(img/bg-3.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: right bottom;
-    }
-    .menu{
-        text-transform: uppercase;
-        text-align: right;
-        list-style-type: none;
-    }
-    .aprenda{
 
-    }
-
-</style>
 <body>
     <div id="principal">
         <!--Obs1: Tag div para facilitar centralização do conteúdo da página -->
         <header class="cabecalho">
             <nav>
                 <ul>
-                    <li class="menu"><a href="index.html" target="_blank"> Início</a></li>
-                    <li class="menu"><a href="#" target="_blank"> Quem sou seu</a></li>
-                    <li class="menu"><a href="#" target="_blank"> Contato</a></li>
+                    <li><a href="index.html" target="_blank"> Início</a></li>
+                    <li><a href="#" target="_blank"> Quem sou eu</a></li>
+                    <li><a href="#" target="_blank"> Contato</a></li>
                 </ul>
             </nav>
-            <div>
+            <div class="c-texto">
             <!--Obs1: Tag div para facilitar centralização do conteúdo da página -->
                 <h1>Curso Web Fundamentos</h1>
-                <p class="aprenda">Aprenda HTML, CSS e Javascript</p>
+                <p>Aprenda HTML, CSS e Javascript</p>
             </div>
         </header>
         
         <main>
-            <section>
+            <section class="conteudo">
                 <div id="card">
-                    <img src="img/card_01.png" alt="Seletores">
+                    <img src="img/card_01.png" alt="">
                     <p>Seletores</p>
                 </div>
                 <div id="card">
-                    <img src="img/card_02.jpg" alt="Posicionamento">
+                    <img src="img/card_02.jpg" alt="">
                     <p>Posicionamento</p>
                 </div>
                 <div id="card">
-                    <img src="img/card_03.jpg" alt="Fontes e ícones">
+                    <img src="img/card_03.jpg" alt="">
                     <p>Fontes e Ícones</p>
                 </div>
             </section>
-            <section>
+            <section class="conteudo">
                 <article>
                     <header><h2>Título</h2></header>
                     <p>Primeiro parágrafo de exemplo</p>
