@@ -9,12 +9,30 @@
         background-position:right center;
         background-size:cover;
     }
-    .cabecalho li{
-        text-transform: uppercase;
+    .cabecalho ul{
         text-align: right;
-        list-style-type: none;
+        padding: 2%;
     }
-    a{color: white;}  
+    .cabecalho li{
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 1%;
+        border: solid 2px white;
+        background-color: #A2A19A;
+    }
+    .cabecalho a{
+        background-color: rgba(0,0,0,0.2);
+        color: white;
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .cabecalho a:hover{
+        background-color: rgba(0,0,0,0.5);    
+    }
     .c-texto{
         text-align: center;
         margin: 7%;
@@ -26,7 +44,7 @@
         text-shadow: 3px 3px 3px #333;
     }
     .c-texto p{
-        background-color: #464646;
+        background-color: rgba(0,0,0,0.6);
         color: white;
         border-bottom: solid 2px white;
         width: 30%;
@@ -38,10 +56,21 @@
         margin: auto;    
     }
     .conteudo{
+        display: block;
         background-color: white;
         padding: 10px;
-        margin-top: 1%;
-        margin-bottom: 1%;
+        margin: 10px;
+    }
+    #card p{
+        color: white;
+        background-color: #464646;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1%;
+        letter-spacing: 2px;
+    }
+    #card img{
+        display: inline-block;
     }
     article h2{
         margin: 2px;
@@ -53,13 +82,6 @@
     }
     article p{
         font-size: 20px;
-    }
-    #card p{
-        color: white;
-        background-color: #464646;
-        text-transform: uppercase;
-        padding: 1%;
-        display: block;
     }
     footer{
         text-align: center;
