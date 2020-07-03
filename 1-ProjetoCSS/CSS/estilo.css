@@ -55,23 +55,53 @@
         width: 80%;
         margin: auto;    
     }
+    .cards{
+        display: block;
+        background-color: white;
+        height: 100%;
+        padding: 6px;
+        margin-top: 15px;
+        overflow: auto;
+    }
+    .cards img{
+        width: 100%;
+        display: block;
+    }
+    #card1, #card2{
+        color: white;
+        background-color: #464646;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        float: left;
+        width: 32%;
+        box-sizing: border-box;
+        margin-right: 2%;
+    }
+    #card3{
+        color: white;
+        background-color: #464646;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        width: 32%;
+        float: left;
+        box-sizing: border-box;
+    }
+    #card1 p, #card2 p, #card3 p{
+
+        padding-left: 3%;
+    }
     .conteudo{
+        clear: both;
         display: block;
         background-color: white;
         padding: 10px;
-        margin: 10px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        overflow: auto;
     }
-    #card p{
-        color: white;
-        background-color: #464646;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 1%;
-        letter-spacing: 2px;
-    }
-    #card img{
-        display: inline-block;
-    }
+
     article h2{
         margin: 2px;
         padding: 1%;

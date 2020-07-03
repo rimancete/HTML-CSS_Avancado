@@ -1,5 +1,6 @@
-*.*
-imgs/
+*.zip
+curriculum.jpg
 1-ProjetoCSS/*.zip
 1-ProjetoCSS/*.png
 .gitignore
+imgs
