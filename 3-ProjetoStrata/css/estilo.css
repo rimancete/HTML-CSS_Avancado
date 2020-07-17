@@ -1,8 +1,82 @@
+/*Início Formatação genérica de elementos*/
 body{
     font-family: 'Open Sans', arial, helvetica, sans-serif;
     color: #888;
     line-height: 2;
 }
+a{
+    transition: color .2s linear, border .2s linear;
+    text-decoration: none;
+    border-bottom: dotted 1px;
+    color: rgb(18, 177, 129);
+    
+}
+a:hover{
+    border-bottom-color: transparent;
+}
+p{
+    margin: 0 0 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #787878;
+    font-weight: normal;
+    /*Tamanho "em" e unidade de medida prorporcional ao font size do elemento*/
+    margin: 0 0 1em;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 22px;
+    margin-top: 1em;
+}
+h5{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 1em;
+}
+h6{
+    font-size: 12px;
+}
+sub, sup{
+    font-size: 12px;
+}
+blockquote{
+    font-size: 14px;
+    font-style: italic;
+    border-left: solid 7px rgba(180, 180, 180, .4);
+    margin: 2em 0;
+    padding: 0 0 0 2.5%;
+    box-sizing: border-box;
+}
+ul, ol{
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    font-size: 16px;
+}
+/*Formatar todo o código, ajustando os paddings em relação ao tamanho da fonte*/
+code{
+    font-family: "courier new", monospace;
+    border-radius: .35em;
+    border: solid 1px rgba(180, 180, 180, .6);
+    background-color: rgba(180, 180, 180, .2);
+    font-size: .9em;
+    padding: .25em 0 .65em .65em;
+    color: rgb(158, 157, 157);
+}
+pre code{
+    display: block;
+}
+/*Término Formatação genérica de tags*/
+
 .main-header{
 position: fixed;
 top: 0;
@@ -16,9 +90,76 @@ background-position: top, left;
 background-size: auto, cover;
 
 }
+.main-header-title{
+    font-size: 24px;
+    color: rgba(255,255,255,.5);
+    text-align: right;
+}
+.main-header-title strong{
+    color: white;
+}
+.main-header-title-link{
+    color: inherit;
+    border-bottom: 1px dotted inherit;
+    text-transform: uppercase;
+}
+.main-header-title-link:hover{
+    color: rgb(18, 177, 129);
+}
 .main-content{
     width: 65%;
     margin-left: 35%;
     padding: 8% 10% 5% 5%;
     box-sizing: border-box;
+}
+.unordered span{
+    padding-left: .5em;
+}
+.ordered span{
+    padding-left: .25em;
+}
+.ul-alternate{
+    padding-left: 0;
+    list-style-type: none;
+}
+.ul-alternate li{
+    border-bottom: solid 1px rgba(180, 180, 180, .6);
+}
+/*Pseudoclasse "last-child" sendo retirada a border de baixo*/
+.ul-alternate li:last-child{
+    border: 0;
+    margin-bottom: 2em;
+}
+.ul-icons{
+    padding-left: 0;
+    list-style-type: none;
+}
+.ul-icons li{
+    display: inline-block;
+    font-size: 1.5em;
+    padding-right: 1em;
+    color: rgb(18, 177, 129);
+}
+.row{
+    overflow: auto;
+}
+.col-2{
+    width: 50%;
+    float: left;
+}
+.button-default{
+    background: rgb(18, 177, 129);
+    color: white;
+    font-size: .9em;
+    padding: .75em 3em;
+    border-radius: .35em;
+    border: solid 2px rgb(18, 177, 129);
+}
+.button-default-stroke{
+    background: white;
+    color:inherit;
+    border-color: rgb(180, 180, 180);
+}
+.button-default-small{
+    font-size: .5em;
 }

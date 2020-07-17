@@ -20,11 +20,11 @@
         <a href="index.html" class="main-header-link">
             <img src="images/avatar.jpg" alt="texto qualquer">
         </a>
-        <h1>
+        <h1 class="main-header-title">
             Trabalhos e groselhas de <br>
-            <strong>Daniel Tapias Morales</strong>,<br>
-            um zé ninguém qualquel<br>
-            Retirado de <a href="https://html5up.net">html5up.net</a>.
+            <strong>Daniel Tapias Morales</strong>,
+            um zé ninguém qualquer.<br>
+            Retirado de <a href="https://html5up.net" class="main-header-title-link">html5 up</a>.
         </h1>
     </header>
     <main class="main-content">
@@ -119,6 +119,13 @@
             <h4>Text</h4>
             <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.</p>
             <p>This is <u>underlined</u> and this <code>code: for(;;) { ... }</code>. Finally, this is <a href="#">a link</a>.</p>
+
+            <h1>Título h1</h1>
+            <h2>Título h2</h2>
+            <h3>Título h3</h3>
+            <h4>Título h4</h4>
+            <h5>Título h5</h5>
+            <h6>Título h6</h6>
             
             <blockquote cite="http://developer.mozilla.org">
                 <p>Esta é uma citação longa tirada da<br>
@@ -129,41 +136,46 @@
                 <q cite="https://www.mozilla.org/en-US/about/history/details/">o Firefox 1.0
                 foi lançado em 2004 e tornou-se um grande sucesso.</q>
             </p>
-            <h4>Préformatado</h4>
+            <h5>Préformatado</h5>
             <pre>
                 <code>
 &lt;script&gt;
     alert('oi');
 &lt;/script&gt;
-                </code>    
+                </code>
             </pre>
             <h4>Listas</h4>
-                <h5>Não ordenada</h5>
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+                <div class="row">
+                    <div class="col-2">
+                        <h5>Não ordenada</h5>
+                            <ul class="unordered">
+                                <li><span>Item 1</span></li>
+                                <li><span>Item 2</span></li>
+                                <li><span>Item 3</span></li>
+                            </ul>
 
-                <h5>Ordenada</h5>
-                <ol>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li> 
-                </ol>
-
-                <h5>Alternate</h5>
-                <ul class="ul-alternate">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li> 
-                </ul>
-            <h4>Ícones</h4>
-                    <ul>
+                        <h5>Ordenada</h5>
+                            <ol class="ordered">
+                                <li><span>Item 1</span></li>
+                                <li><span>Item 2</span></li>
+                                <li><span>Item 3</span></li> 
+                            </ol>
+                    </div>
+                    <div class="col-2">
+                        <h5>Alternate</h5>
+                    <ul class="ul-alternate">
+                        <li><span>Item 1</span></li>
+                        <li><span>item 2</span></li>
+                        <li><span>Item 3</span></li> 
+                    </ul>
+                    <h5>Ícones</h5>
+                    <ul class="ul-icons">
                         <li><i class="fab fa-twitter"></i></li>
                         <li><i class="fab fa-facebook"></i></li>
                         <li><i class="fab fa-instagram"></i></li>
                     </ul>
+                    </div>
+                </div>
 
             <h4>Actions</h4>
                     <p>
@@ -279,8 +291,8 @@
                     <button class="button-default button-default-stroke">Default</button>
                 </p>
                 <p>
-                    <button class="button-default button-defaultsmall">Default</button>
-                    <button class="button-default button-default-small button-default-stroke">Default</button>
+                    <button class="button-default button-default-small">Small</button>
+                    <button class="button-default button-default-stroke button-default-small">Small</button>
                 </p>
                 <p>
                     <button class="button-default button-default-full">Default</button>
