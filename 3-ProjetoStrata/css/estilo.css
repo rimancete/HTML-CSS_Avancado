@@ -140,13 +140,50 @@ background-size: auto, cover;
     padding-right: 1em;
     color: rgb(18, 177, 129);
 }
+/*Colunas das lists e actions*/
 .row{
     overflow: auto;
 }
 .col-2{
-    width: 50%;
+    width: 49%;
     float: left;
 }
+.col-2:first-child{
+    margin-right: 2%;
+}
+/* Iniciando Grid do formulário de contato e endereço*/
+.col-2-3{
+    width: 65%;
+    float: left;
+}
+.col-1-3{
+    margin-left: 3%;
+    width: 32%;
+    float: left;
+}
+/* Finalizando Grid do formulário de contato e endereço*/
+input, label, textarea{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+input, textarea{
+    background: #ccc;
+    padding: 1em;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1em;
+    border: 3px solid transparent;
+
+}
+input:focus, textarea:focus{
+    border: 3px solid rgb(18, 177, 129);
+    outline: none;
+}
+textarea{
+    height: 10em;
+}
+
 .button-default{
     background: rgb(18, 177, 129);
     color: white;
@@ -154,6 +191,8 @@ background-size: auto, cover;
     padding: .75em 3em;
     border-radius: .35em;
     border: solid 2px rgb(18, 177, 129);
+    display: inline-block;
+    width: auto;
 }
 .button-default-stroke{
     background: white;
@@ -161,5 +200,52 @@ background-size: auto, cover;
     border-color: rgb(180, 180, 180);
 }
 .button-default-small{
-    font-size: .5em;
+    font-size: .7em;
+}
+.button-default-big{
+    font-size: 1em;
+}
+.button-default-full{
+    display: block;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.table caption{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+.table th{
+    background: rgb(224, 222, 222);
+    padding: .75em;
+}
+.table td{
+    padding: .75em;
+}
+/*Inserindo border embaixo de cada linha da tabela*/
+.table tbody tr{
+    border-bottom: solid 1px rgb(184, 181, 181);
+}
+/*Inserindo border acima da primeira linha da tabela*/
+.table tbody tr:first-child td{
+    border-top: solid 2px rgb(184, 181, 181);
+}
+/*Inserindo border abaixo da ultima linha da tabela*/
+.table tbody tr:last-child td{
+    border-bottom: solid 2px rgb(184, 181, 181);
+}
+/*Inserindo cor de fundo em linhas(células) impares*/
+.table tbody tr:nth-child(even){
+    background: rgba(184, 181, 181,.2);
+}
+.table-alternate tbody tr{
+    border: 1px solid rgb(184, 181, 181);
+}
+.table-alternate tbody tr:first-child td, .table-alternate tbody tr:last-child td{
+    border-top: none;
+    border-bottom: none
 }
