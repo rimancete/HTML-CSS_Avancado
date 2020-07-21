@@ -129,6 +129,16 @@ text-align: right;
     padding: 8% 10% 5% 5%;
     box-sizing: border-box;
 }
+/*Recent Works > Formatando informações das imagens*/
+
+.recent-works-card-title{
+    margin: 3% 0 1% 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.recent-works-card p:last-child{
+    font-size: .9em;
+}
 .unordered span{
     padding-left: .5em;
 }
@@ -210,24 +220,38 @@ textarea{
     font-size: .9em;
     padding: .75em 3em;
     border-radius: .35em;
+    box-sizing: border-box;
     border: solid 2px rgb(18, 177, 129);
     display: inline-block;
     width: auto;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+.button-default:hover{
+    background: rgba(18, 177, 129,.85);
+    border-bottom-color: rgb(18, 177, 129);  
 }
 .button-default-stroke{
     background: white;
     color:inherit;
     border-color: rgb(180, 180, 180);
+    transition: all .4s linear;
+}
+.button-default-stroke:hover{
+    background: white;
+    color:rgb(18, 177, 129);
+    border-color: rgb(18, 177, 129);
 }
 .button-default-small{
     font-size: .7em;
 }
 .button-default-big{
-    font-size: 1em;
+    font-size: 1.3em;
 }
 .button-default-full{
     display: block;
     text-align: center;
+    font-size: 1.1em;
 }
 .table{
     width: 100%;
@@ -273,23 +297,23 @@ textarea{
     border-radius: 10px;
     overflow: hidden;
 }
-.gallery-img{
-    
-}
+/*Imagem ajustada para 100% de largura da div*/
 .gallery-img img{
     width: 100%;
 }
+/*Adicionada margem embaixo da div das thumbs*/
 .gallery-thumb{
     margin-bottom: 2%;   
 }
+/*Adicionado margem e radius em cada img*/
 .gallery-thumb img, .gallery-img img{
     margin-bottom: 2%;
-    display: inline-block;
     border-radius: 10px;
 }
 .img-1-3{
     margin: 0 0 0 0;
 }
+/*Adicionada margem nas laterais da imagem central(coluna) de cada linha*/
 .img-1-3:nth-child(3n-1){
     margin: 0 2%;
 }
@@ -303,4 +327,35 @@ textarea{
     float: right;
     border-radius: 5%;
     margin: 0 0 1% 2.5%;
+}
+/*Formatando footer*/
+.main-footer{
+    display: inline-block;
+    text-align: right;
+    margin-top: 30%;
+}
+.ul-socials{
+    font-size: 1.4em;
+}
+.ul-socials li:last-child{
+    padding-right: 0;
+}
+.p-footer{
+    font-size: 1.05em;
+    text-align: left;
+}
+.icon-link{
+    border-bottom-color: transparent;
+    color: rgba(255,255,255,.5);
+    transition: all .4s linear;
+}
+.icon-link:hover{
+    color: rgb(18, 177, 129);
+}
+/*Ocultando span dos ícones sociais mantendo a leitura para leitores de texto*/
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
