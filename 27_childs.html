@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+        /*Selecionando o terceiro parágrafo*/
+        div p:nth-of-type(3){
+            color: red;
+        }
+        .destaque{
+            background: #ddd;
+        }
+        .destaque:nth-of-type(1){
+            color: green;
+        }
+        .destaque:first-child{
+            color: blue;
+        }
+        p:last-child{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="destaque">Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+        <p class="destaque">Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+        <p>Meu parágrafo</p>
+        <p class="destaque">Meu parágrafo</p>
+        <hr>
+        <p>Meu parágrafo</p>
+        <p>Meu parágrafo</p>
+        <hr>
+    </div>
+</body>
+</html>
