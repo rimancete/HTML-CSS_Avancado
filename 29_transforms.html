@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .div1{
+            width: 150px;
+            height: 50px;
+            background: red;
+            transform: translate(50%, 50%);
+            /*position: relative;
+            top: 50px;
+            left: 50px;*/
+        }
+        .div2{
+            width: 150px;
+            height: 50px;
+            background: blue;
+            position: relative;
+            left: 50%;
+            
+        }
+        .div3{
+            width:50%;
+            overflow: hidden;
+            border: 2px black solid;
+        }
+        .div3-interno{
+            background: yellow;
+            transform: translate(80%,25px);
+        }
+        .div4{
+            width:50%;
+            overflow: hidden;
+            border: 2px black solid;
+        }
+        .div4-interno{
+            background: yellow;
+            transform: rotate(30deg);
+        }
+        .div5{
+            width:50%;
+            overflow: hidden;
+            border: 2px black solid;
+        }
+        .div5-interno{
+            background: yellow;
+            transform: rotate(20deg);
+            transform-origin: left top;
+        }
+        .div6{
+            width:50%;
+            overflow: hidden;
+            border: 2px black solid;
+        }
+        .div6-interno{
+            background: yellow;
+            transform: rotate(20deg) translate(50px);  
+        }
+        .div7{
+            width:50%;
+            overflow: hidden;
+            border: 2px black solid;
+        }
+        .div7-interno{
+            background: yellow;
+            transform: translate(50px) rotate(30deg);  
+        }
+        .div8{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            transform: skew(-30deg,50deg);
+        }
+        .div9{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            transform: scale(.5) translateX(50%);
+            transition: transform .5s;
+        }
+        .div9:hover{
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+    <hr>
+    <div class="div3">
+        <div class="div3-interno">conteudo qualquer</div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. L</p>
+    </div>
+    <hr>
+    <div class="div4">
+        <div class="div4-interno">conteudo qualquer</div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. L</p>
+    </div>
+    <hr>
+    <div class="div5">
+        <div class="div5-interno">conteudo qualquer</div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. L</p>
+    </div>
+    <hr>
+    <div class="div6">
+        <div class="div6-interno">conteudo qualquer</div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. L</p>
+    </div>
+    <hr>
+    <div class="div7">
+        <div class="div7-interno">conteudo qualquer</div>
+        <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. L</p>
+    </div>
+    <hr>
+    <div class="div8">div8</div>
+    <div class="div9">div9</div>
+</body>
+</html>
