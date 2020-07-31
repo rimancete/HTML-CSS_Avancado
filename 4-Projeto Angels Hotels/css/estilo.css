@@ -1,5 +1,6 @@
 /*Normalizando acentuação de caracteres*/
 @charset "UTF-8";
+
 html{
     font-family: sans-serif;
 }
@@ -47,7 +48,6 @@ h1, h2, h3, h4, h5, h6{
 }
 .section-get-started{
     text-align: center;
-    background: #f6f6f6;
 }
 .section-get-started-title{
     font-size: 1.375em;/*22 / 16*/
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 0 3em;
 }
 .card-features{
-    margin: 4em 0;
+    margin: 4em 0 2em 0;
     display: block;
     position: relative;
 }
@@ -98,4 +98,53 @@ h1, h2, h3, h4, h5, h6{
     color: rgb(101,47,120);
     display: block;
     text-align: center;
+}
+.section-design{
+    padding: 2em 3em;
+}
+.design-topics{
+    margin-bottom: 4em;
+}
+.design-topics-title{
+    font-size: 1.375em;/*22 / 16*/
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.design-topics p{
+    color:#333;
+}
+.main-footer{
+    padding-bottom:2em;
+    text-align: center;
+    background: rgb(37,48,65);
+    color: rgb(131,146,158);
+}
+.socials ul{
+    display: block;
+    list-style-type: none;
+    background: rgb(48,61,79);
+}
+.socials li{
+    display: inline-block;
+    margin: .5em 0 .1em 0;
+    font-size: 2em;
+    padding-right: 1em;
+}
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.socials-icon-link{
+    color: rgb(0,29,47);
+}
+.footer-title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.footer-subtitle{
+    text-align: center;
+    padding: 0 1em 0 1em;
+    font-size: 1.2em;
 }
