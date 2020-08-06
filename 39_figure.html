@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+</head>
+<body>
+    <h1>Audio</h1>
+    <!--Inserindo audio-->
+    <audio controls autoplay loop>
+        <!--Informando ao browser o tipo de audio para que ele baixe
+        o tipo de audio que ele suporte(type)-->
+        <source src="media/mozart_trompa.mp3" type="audio/mp3">
+        <source src="media/mozart_trompa.ogg" type="audio/ogg">
+        <!--Inserindo mensagem de erro caso o navegador não suporte
+        quaisquer audio inserido-->
+        <p>Seu browser não suporta essa mídia</p>
+    </audio>
+    <figure>
+        <img src="imgs/newWindow.png" alt="">
+        <figcaption>legenda da imagem html5</figcaption>
+    </figure>
+</body>
+</html>
