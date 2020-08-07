@@ -31,7 +31,16 @@ h1, h2, h3, h4, h5, h6{
     background: rgb(101,47,120);
     padding: .4em 0 .4em 0;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 0;
+}
+/*Adicionando radial gradiente abaixo do menu*/
+.radial {
+    width: 100%;
+    height: 2em;
+    display: block;
+    background-image:radial-gradient(farthest-side at 50% 15%, rgba(10%, 10%, 10%, .1) 50%, transparent 100%);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 /*Retirando bullets da lista e alinhando a margem*/
 .menu ul{
@@ -160,92 +169,107 @@ article{
 /*RESPONSIVIDADE - Ajustando para telas maiores*/
 /*Ajustar formatação para 780px ou mais(780px=780/16= 48.75em)*/
 @media screen and (min-width: 48.75em){
-.body{
-    position: relative;
-} 
-.main-header{
-     text-align: left;
-     display: block;
-     width: 100%;
-     /*em=(16px) x 5 = 80px de altura*/
-     height: 5em;
-     padding-bottom: 0;
- }
- .main-header-logo{
-     float: left;
-     width: 33%;
-     /*em=(16px) x 4,07 = 65,12px de altura*/
-     height: 4.07em;
- }
- .menu{
-     background: transparent;
-     float: left;
-     width: 66%;
-     text-align: right;
- }
- .menu ul{
-     display: inline-block;
-     text-align: right;
- }
- .menu ul li{
-     float: right;
- }
- .menu a{
-    color: rgb(101,47,120);
-    font-weight: bold;
- }
- .menu a:hover{
-    background: #e7d9fc;
- 
- }
- .main-content{
-     position: relative;
-     top: -2em;
- }
- .section-get-started{
-     width: 100%;
-     float: left;
-     background: rgb(101,47,120);
-     padding: 1.5em 0;
-     margin-bottom: 3em;
- }
- .section-get-started::before{
-    content:url(../images/icon_play.svg);
-    display: inline-block;
-    width: 4.5em;
- }
- .section-get-started-title, .section-get-started-subtitle{
-     color: white;
- }
- .section-get-started-subtitle{
-    font-size: 1em;
- }
- article{
-     width: 100%;
-     padding: 0;
- }
- .section-features{
-    margin: 0; 
-    width: 100%;
- }
-.card-features{
-    width: 45%;
-    margin:0 1% 1.5em 3%;
-    float: left;
-} 
-.card-features{
-    font-size: .9em;
-}
-.section-design a{
-    float: right;
+    .body{
+        position: relative;
+    } 
+    .main-header{
+        text-align: left;
+        display: block;
+        width: 100%;
+        /*em=(16px) x 5 = 80px de altura*/
+        height: 5em;
+        padding-bottom: 0;
+    }
+    .main-header-logo{
+        float: left;
+        width: 33%;
+        /*em=(16px) x 4,07 = 65,12px de altura*/
+        height: 4.07em;
+    }
+    .menu{
+        background: transparent;
+        float: left;
+        width: 66%;
+        text-align: right;
+        margin-bottom: 2em;
+    }
+    .menu ul{
+        display: inline-block;
+        text-align: right;
+    }
+    .menu ul li{
+        float: right;
+    }
+    .menu a{
+        color: rgb(101,47,120);
+        font-weight: bold;
+    }
+    .menu a:hover{
+        background: #e7d9fc;
     
+    }
+    .radial{
+        display: none;
+    }
+    .main-content{
+        position: relative;
+        top: -2em;
+    }
+    .section-get-started{
+        width: 100%;
+        float: left;
+        background: rgb(101,47,120);
+        padding: 1.5em 0;
+        margin-bottom: 3em;
+        position: relative;
+    }
+    .section-get-started::before{
+        content:url(../images/icon_play.svg);
+        display: inline-block;
+        width: 4.5em;
+    }
+    .section-get-started-title, .section-get-started-subtitle{
+        color: white;
+    }
+    .section-get-started-subtitle{
+        font-size: 1em;
+    }
+    .radial-get-started{
+        position: relative;
+        top:-6.25em;
+        height: 2em;
+        display: block;
+        background-image:radial-gradient(farthest-side at 50% 15%, rgba(5%, 5%, 5%, .2) 50%, transparent 100%);
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    article{
+        width: 100%;
+        padding: 0;
+    }
+    .section-features{
+        margin: 0; 
+        width: 100%;
+    }
+    .card-features{
+        width: 45%;
+        margin:0 1% 1.5em 3%;
+        float: left;
+    } 
+    .card-features{
+        font-size: .9em;
+    }
+    .section-design a{
+        float: right;
+        
+    }
+    .clearfix::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-}
+/*Adicionando efeito radial gradiente*/
 /*Breakpoint para ajustar formatação para 1000px ou mais(1000px=1000/16= 62.5em)*/
 @media screen and (min-width: 62.5em){
     .section-get-started{
@@ -255,6 +279,11 @@ article{
         height: 30em;
         padding: 10em 1em 0 1em;
         box-sizing: border-box;
+    }
+    /*Ajustando posição da div com radial*/
+    .radial-get-started{
+        position: relative;
+        top:-16.25em;
     }
     .section-get-started::before{
        width:6em;
@@ -271,7 +300,6 @@ article{
         font-size: 1.2em;
         letter-spacing: .3em;
     }
-    .design-topics
 }
 @media screen and (min-width: 74em){
     .section-get-started{
@@ -284,9 +312,16 @@ article{
         padding: 17.5em 13em 0 13em;
         box-sizing: border-box;
     }
+    /*Ajustando radial para resoluções mais altas*/
+    .radial-get-started{
+        position: relative;
+        top:-24.65em;
+        height: 3.5em;
+        background-image:radial-gradient(farthest-side at 50% 5%, rgba(5%, 5%, 5%, .2) 50%, transparent 100%);
+    }
     .section-get-started::before{
         width:7em;
-     }
+        }
     /*Ajuste nas fontes do título e subtítulo da sa seção "get-started"*/
     .section-get-started-title{
         font-size: 1.1em;
@@ -296,7 +331,7 @@ article{
         font-size: .9em;
     }
     /*Alinhando conteúdo do article em 4 colunas e ajustando fontes*/
-  
+
     .card-features{
         width: 21%;
         margin:0 2% 1.5em 2%;
