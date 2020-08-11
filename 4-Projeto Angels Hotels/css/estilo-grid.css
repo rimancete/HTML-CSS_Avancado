@@ -1,0 +1,383 @@
+/*Normalizando acentuação de caracteres*/
+@charset "UTF-8";
+
+html{
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+}
+
+.gridContainer{
+    width: 100%;
+    background: #f6f6f6;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 21.4375em 145em 17em;
+}
+.gridItem{
+    grid-column: 1/-1;
+}
+
+/*Centralizar todo conteúdo caso a resolução seja maior que 1224px*/
+/* .maxwidth{
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+*/
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oxygen";
+    color: rgb(101,47,120);
+}
+.main-header{
+     text-align: center;
+}
+.main-header-logo{
+    margin: .5em 0;
+    display: inline-block;
+}
+
+.menu{
+    background: rgb(101,47,120);
+    padding: .4em 0 .4em 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+/*Adicionando radial gradiente abaixo do menu*/
+.radial {
+    width: 100%;
+    height: 2em;
+    display: block;
+    background-image:radial-gradient(farthest-side at 50% 15%, rgba(10%, 10%, 10%, .1) 50%, transparent 100%);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*Retirando bullets da lista e alinhando a margem*/
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: .5em 0;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    box-sizing: border-box;
+    display: block;
+}
+.menu a:hover{
+    background: rgb(142, 84, 163)
+}
+.main-content{
+    margin: 0 .5em 2em .5em;
+}
+article{
+    width: 100%;
+}
+.section-get-started{
+    text-align: center;
+}
+.section-get-started-title{
+    font-size: 1.375em;/*22 / 16*/
+}
+.section-get-started-subtitle{
+    color: rgb(121, 67, 139);
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+.button-default{
+    background: rgb(81,185,199);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: .75em 3em;
+    border-radius: .35em;
+    box-sizing: border-box;
+    border: solid 2px rgba(81,185,199.5);
+    display: inline-block;
+    width: auto;
+    transition: all .4s linear;
+    cursor: pointer;    
+}
+.button-default:hover{
+    background: rgb(68, 158, 170);
+}
+.section-features{
+    margin: 0 3em;
+}
+.card-features{
+    margin: 4em 0 2em 0;
+    display: block;
+    position: relative;
+}
+.section-features-title{
+    font-size: 1.375em;/*22 / 16*/
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.card-features p{
+    text-align: center;
+    line-height: 1.5em;
+    color:#333;
+}
+.card-features span[class^=icon]{
+    font-size: 4em;
+    color: rgb(101,47,120);
+    display: block;
+    text-align: center;
+}
+.section-design{
+    padding: 2em 3em;
+}
+.design-topics{
+    margin-bottom: 4em;
+}
+.design-topics-title{
+    font-size: 1.375em;/*22 / 16*/
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.design-topics p{
+    color:#333;
+}
+.main-footer{
+    padding-bottom:2em;
+    text-align: center;
+    background: rgb(37,48,65);
+    color: rgb(131,146,158);
+}
+.socials ul{
+    margin-top: 0;
+    display: block;
+    list-style-type: none;
+    background: rgb(48,61,79);
+}
+.socials li{
+    display: inline-block;
+    margin: .5em 0 .1em 0;
+    font-size: 2em;
+    padding-right: 1em;
+}
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.socials-icon-link{
+    color: rgb(0,29,47);
+}
+.footer-title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.footer-subtitle{
+    text-align: center;
+    padding: 0 1em 0 1em;
+    font-size: 1.2em;
+}
+/*RESPONSIVIDADE - Ajustando para telas maiores*/
+/*Ajustar formatação para 780px ou mais(780px=780/16= 48.75em)*/
+@media screen and (min-width: 48.75em){
+    .body{
+        position: relative;
+    }
+    .gridContainer{
+        grid-template-rows: 7.4375em 95em 15em;
+    }
+    .gridFeatures{
+        grid-column: 1/2;
+    } 
+    .main-header{
+        text-align: left;
+        display: block;
+        width: 100%;
+        /*em=(16px) x 5 = 80px de altura*/
+        height: 5em;
+        padding-bottom: 0;
+    }
+    .main-header-logo{
+        float: left;
+        width: 33%;
+        /*em=(16px) x 4,07 = 65,12px de altura*/
+        height: 4.07em;
+    }
+    .menu{
+        background: transparent;
+        float: left;
+        width: 66%;
+        text-align: right;
+        margin-bottom: 2em;
+    }
+    .menu ul{
+        display: inline-block;
+        text-align: right;
+    }
+    .menu ul li{
+        float: right;
+    }
+    .menu a{
+        color: rgb(101,47,120);
+        font-weight: bold;
+    }
+    .menu a:hover{
+        background: #e7d9fc;
+    
+    }
+    .radial{
+        display: none;
+    }
+    .main-content{
+        position: relative;
+        top: -2em;
+    }
+    .section-get-started{
+        width: 100%;
+        float: left;
+        background: rgb(101,47,120);
+        padding: 1.5em 0;
+        margin-bottom: 3em;
+        position: relative;
+    }
+    .section-get-started::before{
+        content:url(../images/icon_play.svg);
+        display: inline-block;
+        width: 4.5em;
+    }
+    .section-get-started-title, .section-get-started-subtitle{
+        color: white;
+    }
+    .section-get-started-subtitle{
+        font-size: 1em;
+    }
+    .radial-get-started{
+        position: relative;
+        top:-6.25em;
+        height: 2em;
+        display: block;
+        background-image:radial-gradient(farthest-side at 50% 15%, rgba(5%, 5%, 5%, .2) 50%, transparent 100%);
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    article{
+        width: 100%;
+        padding: 0;
+    }
+    .section-features{
+        margin: 0; 
+        width: 100%;
+    }
+    .card-features{
+        width: 45%;
+        margin:0 1% 1.5em 3%;
+        float: left;
+    } 
+    .card-features{
+        font-size: .9em;
+    }
+    .section-design a{
+        float: right;
+        
+    }
+    .clearfix::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+/*Adicionando efeito radial gradiente*/
+/*Breakpoint para ajustar formatação para 1000px ou mais(1000px=1000/16= 62.5em)*/
+@media screen and (min-width: 62.5em){
+    .section-get-started{
+        /*alinhando cor de fundo e imagem*/
+        background: #521a66 url(../images/bg_topo_1198x670.jpg);
+        /*Sabendo que a img tem 670px(38.875em), ajustei a altura para próximo do desejado*/
+        height: 30em;
+        padding: 10em 1em 0 1em;
+        box-sizing: border-box;
+    }
+    /*Ajustando posição da div com radial*/
+    .radial-get-started{
+        position: relative;
+        top:-16.25em;
+    }
+    .section-get-started::before{
+       width:6em;
+    }
+    /*Ajuste nas fontes do título e subtítulo da sa seção "get-started"*/
+    .section-get-started-title{
+        font-size: 1.2em;
+    }
+    .section-get-started-subtitle{
+        font-weight: bold;
+        font-size: .95em;
+    }
+    .design-topics-title{
+        font-size: 1.2em;
+        letter-spacing: .3em;
+    }
+}
+@media screen and (min-width: 74em){
+    .section-get-started{
+        /*alinhando cor de fundo e imagem*/
+        background-image:url(../images/bg_topo_1600x1374.jpg);
+        background-size: cover;
+        /*Sabendo que a img tem 1374px(85.87em), ajustei a altura para próximo do desejado*/
+        height: 35em;
+        background-position: top right;
+        padding: 17.5em 13em 0 13em;
+        box-sizing: border-box;
+    }
+    /*Ajustando radial para resoluções mais altas*/
+    .radial-get-started{
+        position: relative;
+        top:-24.65em;
+        height: 3.5em;
+        background-image:radial-gradient(farthest-side at 50% 5%, rgba(5%, 5%, 5%, .2) 50%, transparent 100%);
+    }
+    .section-get-started::before{
+        width:7em;
+        }
+    /*Ajuste nas fontes do título e subtítulo da sa seção "get-started"*/
+    .section-get-started-title{
+        font-size: 1.1em;
+    }
+    .section-get-started-subtitle{
+        font-weight: bold;
+        font-size: .9em;
+    }
+    /*Alinhando conteúdo do article em 4 colunas e ajustando fontes*/
+
+    .card-features{
+        width: 21%;
+        margin:0 2% 1.5em 2%;
+        float: left;
+    }
+    .card-features span[class^=icon]{
+        font-size: 3em;
+    }
+    .section-features-title{
+        font-size: 1.2em;
+        letter-spacing: .3em;
+    }
+    .section-design{
+        padding: 0;
+    }
+    .design-topics{
+        display: inline-block;
+        width: 45%;
+        margin: 0 0 2em 2%;
+    }
+    .design-topics-title{
+        font-size: 1.1em;
+        letter-spacing: .3em;
+    }
+    .design-topics a{
+        /*voltando o "botão" à esquerda(float=none)*/
+        float: none;
+    }
+  
+}

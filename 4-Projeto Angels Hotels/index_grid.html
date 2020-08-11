@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Projeto Responsivo</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Projeto Responsivo">
+    <meta name="keywords" content="html5, css, mobile, tablet, responsivo, tecnologia">
+    <!--Importar font icons para os cards do main da página-->
+    <link rel="stylesheet" href="iconmoon/style.css">
+    <!--Igualar a formatação(normalize.css) e aplica o CSS do site(estilo.css)-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo-grid.css">
+    <!--Adicionar Fonte "personalizada"-->
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <!--Adicionar fonte para ícones de sociais-->
+    <script src="https://kit.fontawesome.com/4d78486ca1.js" crossorigin="anonymous"></script>
+    <!--RESPONSIVIDADE - Ajustando largura do conteudo em relação ao dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="gridContainer">
+        <header class="main-header gridItem">
+            <!--Div maxwidth para manter todo o conteúdo centralizado após os breakpoints-->
+                <img class="main-header-logo" src="images/logo_mob.svg" alt="Logotipo da Range Hotels">
+                <nav class="menu">
+                    
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            <div class="radial"></div>
+            
+        </header>
+        <main class="main-content gridItem">
+            <section class="section-get-started">
+                <!--Div para radial do get-started > Ativada no bp 780px e reajustada nos demais breapoints-->
+                <div class="radial-get-started"></div>
+                <!--Div maxwidth para manter todo o conteúdo centralizado após os breakpoints-->
+                <div class="maxwidth">
+                    <h1 class="section-get-started-title">A exciting new venture over the range</h1>
+                    <p class="section-get-started-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit.</p>
+                    <a href="#" class="button-default">Get Started</a>
+                </div>
+            </section>
+                <article>
+                    <section class="section-features gridFeatures">
+                        <!--Div maxwidth para manter todo o conteúdo centralizado após os breakpoints-->
+                        <div class="maxwidth">
+                            <div class="card-features">
+                                <!--Adicionando ícones do card-->
+                                <span class="icon-stopwatch"></span>
+                                <h2 class="section-features-title">Designer Guff</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div>
+                            <div class="card-features">
+                                <!--Adicionando ícones do card-->
+                                <span class="icon-stats-bars2"></span>
+                                <h2 class="section-features-title">Detaild Stats</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div>
+                            <div class="card-features">
+                                <!--Adicionando ícones do card-->
+                                <span class="icon-clock"></span>
+                                <h2 class="section-features-title">Dashboard</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div>
+                            <div class="card-features">
+                                <!--Adicionando ícones do card-->
+                                <span class="icon-cog"></span>
+                                <h2 class="section-features-title">Development</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-design gridDesign">
+                        <!--Div maxwidth para manter todo o conteúdo centralizado após os breakpoints-->
+                        <div class="maxwidth">
+                            <div class="design-topics clearfix">
+                                <h2 class="design-topics-title">Designg Heading</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div>
+                            <div class="design-topics clearfix">
+                                <h2 class="design-topics-title">Designg Trends</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                            </div> 
+                        
+                            <div class="design-topics clearfix">
+                                <h2 class="design-topics-title">Designg Users</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                                <a href="#" class="button-default">Get Started</a>
+                            </div>                     
+                            <div class="design-topics clearfix">
+                                <h2 class="design-topics-title">Designg Goals</h2>
+                                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                                <a href="#" class="button-default">Buy Now</a>
+                            </div>
+                    </div>  
+                    </section>
+                </article>
+        </main>
+        <footer class="main-footer gridItem">
+            <div class="socials">
+                <ul>
+                    <li><a href="#" class="socials-icon-link"><span class="hidden">Facebook</span><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="socials-icon-link"><span class="hidden">Twitter</span><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="socials-icon-link"><span class="hidden">Google Plus</span><i class="fa fa-google-plus-official" aria-hidden="true"></i></i></a></li>
+                </ul>
+            </div>
+            <p class="footer-title">Copyright The Range</p>
+            <p class="footer-subtitle">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+        </footer>
+    </div>
+</body>
+</html>
