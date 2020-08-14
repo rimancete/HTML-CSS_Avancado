@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Meu CSS não funciona</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+        body{
+            margin: 0;
+        }
+        #externa{
+            background: yellow;
+            width: 80%;
+            /*Unidade vh facilita ajuste de altura.
+            INSERIR NOS ELEMENTOS PAI*/
+            height: 80vh;
+        }
+        #interna{
+            width: 90vw;
+            height: 80%;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div id="externa">externa
+            <div id="interna">INTERNA
+
+            </div>
+        </div>
+    </header>
+</body>
+</html>
