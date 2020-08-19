@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="descrição bacanuda">
+    <meta name="keywords" content="html5, css, tecnologia">
+    <style>
+        @keyframes anda{
+            0%{
+                transform:translatex(0);
+                background: yellow ;
+            }
+            100%{
+               transform: translateX(300px); 
+               background: blue;
+            }
+        }
+        #anima-time div{
+            width: 80px;
+            height: 50px;
+            border: 2px solid red;
+        }
+        #anima-time div:nth-child(1){
+            /* animation-name: anda;
+            animation-duration: 2s;
+            
+            ease-in - inicio > acelera
+            ease-out - final - desacelera
+            
+            animation-timing-function: ease-in; */
+
+            animation: anda 2s ease-in-out;
+            
+        }
+        /* testando count e direction */
+        #anima-time div:nth-child(2){
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count:infinite;
+            animation-direction: alternate-reverse; */
+            
+
+            animation: anda 2s ease-in-out infinite alternate-reverse;
+        }
+        /* testando delay */
+        #anima-time div:nth-child(3){
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count:infinite;
+            animation-direction: alternate-reverse;  */
+            
+            animation: anda 2s ease-in-out 1s infinite alternate-reverse;
+
+        }
+
+
+
+        /* testando fill-mode */
+        #anima-time div:nth-child(4){
+            
+            background: red;
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count:2;
+            animation-direction: alternate; 
+            /* nesse exemplao, quando a animação iniciar da esquerda para direita
+            o "backwards" faz com que a animação comece com amarelo(definido no from do keyframe)
+            ou o "forwards" faz com que a animação termine no amarelo(definido no to do keyframe)
+            ou o "both" aplica ambas as formatações definidas no from e to)*/
+            animation-fill-mode: both; 
+            /* animation: anda 2s ease-in-out 1s 2 alternate-reverse; */
+
+        }
+        /* testando o play-state */
+        #anima-time div:nth-child(5){
+            
+            background: red;
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            
+            animation-iteration-count:infinite;
+            animation-direction: alternate; 
+            /* nesse exemplao, quando a animação iniciar da esquerda para direita
+            o "backwards" faz com que a animação comece com amarelo(definido no from do keyframe)
+            ou o "forwards" faz com que a animação termine no amarelo(definido no to do keyframe)
+            ou o "both" aplica ambas as formatações definidas no from e to)*/
+            animation-fill-mode: both; 
+            animation-play-state: running;
+            /* animation: anda 2s ease-in-out 1s 2 alternate-reverse; */
+
+        }
+        #anima-time div:nth-child(5):hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    <div id="anima-time">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
