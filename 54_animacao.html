@@ -11,7 +11,16 @@
         @keyframes anda{
             0%{
                 transform:translatex(0);
-                background: yellow ;
+                background: yellow;
+            }
+            25%, 75%{
+                height: 80px;
+            }
+            50%{
+                background: orange;
+            }
+            80%{
+                background: green;
             }
             100%{
                transform: translateX(300px); 
@@ -74,7 +83,7 @@
             animation-direction: alternate; 
             /* nesse exemplao, quando a animação iniciar da esquerda para direita
             o "backwards" faz com que a animação comece com amarelo(definido no from do keyframe)
-            ou o "forwards" faz com que a animação termine no amarelo(definido no to do keyframe)
+            ou o "forwards" faz com que a animação termine no amarelo(definido no from do keyframe)
             ou o "both" aplica ambas as formatações definidas no from e to)*/
             animation-fill-mode: both; 
             /* animation: anda 2s ease-in-out 1s 2 alternate-reverse; */
@@ -107,6 +116,7 @@
 </head>
 <body>
     <h1>Animation</h1>
+    <p><code>animation: name durantion time-function delay iteration-count direction fill-mode play-state</code></p>
     <div id="anima-time">
         <div>1</div>
         <div>2</div>

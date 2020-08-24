@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="CSS com animation">
+    <meta name="keywords" content="html5, CSS, tecnologia">
+    <style>
+        @keyframes slide{
+            0%, 23%, 100%{
+                transform: translateY(-150vh);
+            }
+            25%, 47%{
+                transform: translateY(-100vh);
+            }
+            50%, 72%{
+                transform: translateY(-50vh);
+            }
+            75%, 97%{
+                transform: translateY(0);
+            }
+            
+        }
+        body{
+            font-family: sans-serif;
+            color: white;
+            background: #1a1818;
+            margin: 0;
+        }
+        #slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        #slide-interno{
+            width: 100%;
+            animation: slide 15s cubic-bezier(.27,-0.44,.59,1.77) infinite alternate-reverse;
+            will-change: transform;
+        }
+        #slide-interno img{
+            display: block;
+            height: 50vh;
+            width: 100%;
+            /* Parecido com background-size
+            porém aplicado à imagem.
+            Opção "cover" procura não distorcer a imagem */
+            /* object-fit: cover; */
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation - slideshow</h2>
+    <div id="slide-externo">
+        <div id="slide-interno">
+            <img src="imgs/slide1.jpg" alt="dog 1">
+            <img src="imgs/slide2.jpg" alt="dog 2">
+            <img src="imgs/slide3.jpg" alt="dog 3">
+            <img src="imgs/slide4.jpg" alt="dog 4">
+        </div>
+    </div>
+</body>
+</html>
