@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //1- pedir o nome do jogador 1
+        var nome1 = prompt("JOGADOR 1: Informe seu nome");
+        //2 - pedir o nome do jogador 2
+        var nome2 = prompt("JOGADOR 2: Informe seu nome");
+        
+        //3 - fazer o jogador 1 digitar um número
+        var n1 = parseInt(prompt(nome1 + ", digite um número"));
+        //4 - fazer o jogador 2 digitar outro número
+        var n2 = parseInt(prompt(nome2 + ", digite um número"));
+        
+        //5 - se forem iguais, mostrar a mensagem 'empate'
+        if (n1 == n2){
+            alert("Vocês empataram");
+        }
+        /* TEACHER ANSWER
+        Se os números informados forem diferentes, segue o programa
+        else
+        */
+        else{
+            //6 - sortear um número entre 0 e 1
+            var sorteio = Math.floor(Math.random() * 2);
+            alert("Número sorteado é: " + sorteio);
+
+            //7 - se o numero sorteado for 0, ganha quem escolher o número MENOR
+            if (sorteio == 0){
+                if (n1 < n2){
+                alert(nome1 + " VENCEU!. Parabéns")            
+            }
+                else {
+                alert(nome2 + " VENCEU! Parabéns")
+                }
+            }
+            //8 - se o número sorteado for 1, ganha quem escolher o ńumero MAIOR
+            else{
+                if (n1 > n2){
+                alert(nome1 + " VENCEU!. Parabéns")
+                
+            }
+                else{
+                alert(nome2 + " VENCEU! Parabéns")
+                }
+            }
+            
+        }
+
+        /*TEACHER ANSWER
+        Passo 5, 6 e 8 - Utilizou "==="(comparação de valor e TIPO)
+        
+        Passo 6 - Utilizou parseInt para retirar os decimais:
+        parseInt(math.random()*2)
+        Portanto
+        var sorteio = parseInt(Math.random() * 2);
+
+        Passo 8 - Utilizou o "else" no caso do número sorteado ser igual a 1
+        */
+    </script>
+</body>
+</html>

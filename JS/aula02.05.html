@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //pedir para o usuário digitar um número e converter para float
+        var n1 = parseFloat(prompt("Digite um número"));
+        //pedir para o usuário digitar outro número e converter para float
+        var n2 = parseFloat(prompt("Digite outro número"));
+        
+        //calcular a média dos dois números
+        var media = (n1+n2)/2;
+        
+
+        /*
+        MY ANSWER
+        se a média for maior ou igual a 5
+        mostrar num alert o seguinte texto
+        Você foi aprovado;
+        se não, mostrar num alert o seguinte texto
+        Você foi reprovado.
+        OBS: Inserir bloco entre colchetes
+        */
+        
+        if (media >= 5)
+        alert("Você foi APROVADO");
+        else
+        alert("Você foi REPROVADO. Seu BURRO!");
+
+        /*
+        TEACHER ANSWER
+        exibir o resultado da comparação
+        */
+        // if (media > 5){
+        //     alert("Você foi APROVADO");
+        // }
+        // else{
+        //     alert("Você foi REPROVADO. Seu BURRO!");
+        // }
+        
+    </script>
+</body>
+</html>

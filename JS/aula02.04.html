@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //pedir para o usuário digitar um número e converter para float
+        var n1 = parseFloat(prompt("Digite um número"));
+        //pedir para o usuário digitar outro número e converter para float
+        var n2 = parseFloat(prompt("Digite outro número"));
+        
+        //calcular a média dos dois números
+        var media = (n1+n2)/2;
+        
+
+        /*
+        MY ANSWER
+        se a média for maior que 5
+        mostrar num alert o seguinte texto
+        a média entre (n1) e (n2) é: (resultado);
+        se não, mostrar num alert o seguinte texto
+        Média inferior a 5.
+        */
+        
+        
+        // if (media > 5)
+        //     alert("a média entre " + n1 + " e " + n2 + " é: " + media);
+        // else
+        //     alert("Média inferior a 5.");
+
+        /*
+        TEACHER ANSWER
+        exibir o resultado da comparação
+        */
+        alert(media > 5);
+        
+    </script>
+</body>
+</html>

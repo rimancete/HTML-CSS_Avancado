@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        /*
+        1- fazer jogador1 digitar um numero*/
+        var nJogador1 = parseInt(prompt('numero do jogador 1'));
+        
+        //2- fazer jogador2 digitar outro numero
+        var nJogador2 = parseInt(prompt('numero do jogador 2'));
+        
+        /*
+        MINHA RESOLUÇÃO
+        3-se os valores forem iguais, mostrar mensagem 'empate'*/
+        
+        
+        // if(nJogador1 === nJogador2){
+        //     alert('voces empataram');
+        
+        // //4- SE NÃO sorteia um numero entre 0 e 1
+        // } else {
+        //     var nSorteado = parseInt(Math.random() * 2);
+        //     alert(nSorteado);
+        //     /*5- se o numero sorteado for 0
+        //     VENCE quem escolher o numero MENOR*/
+        //     if (nSorteado === 0 && (nJogador1 < nJogador2) || (nJogador2 < nJogador1)){
+        //         if (nJogador1 < nJogador2){
+        //             alert('ganhou o jogador 1');
+        //         }
+        //         else {
+        //             alert('ganhou o jogador 2');
+        //         }
+                
+        //     }
+        //     //6- SE NÃO VENCE quem escolher o numero MAIOR
+        //      else {
+        //         if(nJogador1 > nJogador2){
+        //             alert('ganhou o jogador 1');
+        //         }
+        //         else {
+        //             alert('ganhou o jogador 2')
+        //         }
+        //     }
+        // }
+
+
+
+        /*
+        TEACHER ANSWER
+        Lógica: Para o njogador1 vencer, é:
+        1- Quando a nota dele for MENOR que o njogador2 E o número sorteado for igual a 0
+        2- Quando a nota dele for MAIOR que o njogador2 E o número sorteado for igual a 1
+        3 - Qualquer outra condição, o njogador2 vence
+        */
+
+        if(nJogador1 === nJogador2){
+            alert('voces empataram');
+        
+        //Sorteia um numero entre 0 e 1
+        } else {
+            var nSorteado = parseInt(Math.random() * 2);
+            alert(nSorteado);
+            /*Se (njogador1 MENOR que njogador2 E o numero sorteado for 0) OU (njogador1 MAIOR que njogador2 E número sorteado for 1)
+            VENCE njogador1*/
+            if ((nJogador1 < nJogador2 && nSorteado === 0) || (nJogador1 > nJogador2 && nSorteado === 1)){
+                alert('ganhou o jogador 1');
+            }
+
+            //SE NÃO VENCE njogador2    
+                else{
+                    alert('ganhou o jogador 2');
+                }
+                
+        }
+
+
+    </script>
+</body>
+</html>

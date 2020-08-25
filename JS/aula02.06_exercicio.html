@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //1 - Digite a primeira nota
+        var nota1 = parseFloat(prompt("Digite a primeira nota"));
+        //2 - Digite a primeira nota
+        var nota2 = parseFloat(prompt("Digite a segunda nota"));
+        
+        /*3 - se alguma das notas forem 0(OR=||), mostrar a mensagem 'reprovado'
+        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos
+        */
+        
+        
+        // if (nota1 === 0 || nota2 === 0){
+        //     alert("Reprovado por zerar am algumas das provas.");
+        // }
+        // /*4 - Se não,
+        // Se a média for maior que 5, mostra a mensagem 'aprovado'
+        // */
+        // else if((nota1+nota2)/2 > 5){
+        //     alert("Você foi aprovado!");
+        // }
+        // //5 - Se não, mostra a mensagem 'reprovado'
+        // else{
+        //     alert("Você foi reprovado");
+        // }
+        
+        
+        /*TEACHER ANSWER
+        EXERCÍCIO PROPOSTO
+        Passo 3 - Se algumas das notas forem maior que 0 e a média maior que 5
+        Passo 4 - Mostra a mensagem de aprovado
+        Passo 5 - Se não, mostra a mensagem de reprovado
+        */
+        
+        if ((nota1 > 0 || nota2 > 0) && (nota1+nota2) / 2 > 5){
+            alert("Você foi aprovado!");
+        }
+        
+        else {
+            alert("Você foi reprovado");
+        }           
+    </script>
+</body>
+</html>
