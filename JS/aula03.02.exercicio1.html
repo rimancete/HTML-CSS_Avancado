@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //1- Pedir para usuário digitar um numero entre 1 e 5
+        var n1 = parseFloat(prompt('Digite um número'));
+        
+        var i = parseInt(1);
+        var d;
+        
+    /* Enquanto o índice for <=1000 faça a tabuada do número digitado,
+    inserindo uma divisória a cada mudança de dezena*/
+     for(i=1;i<=1000;i++){
+         document.write(n1 + " x " + i + " = " + n1*i + "<br>");
+         // Identificando o último dígito do índice
+         d = parseInt(i.toString().split('').pop());
+         // SE o último dígito for 0, escreve uma divisória
+            if (d == 0){
+            document.write("<hr>");
+            }
+     }
+     document.write("Saiu do loop");
+    </script>
+</body>
+</html>

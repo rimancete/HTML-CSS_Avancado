@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        //1- Pedir para usuário digitar um numero entre 1 e 5
+        var n1 = parseInt(prompt('Digite um número entre 1 e 5'));
+        
+        //2- Mostrar uma msg diferente para cada número
+        switch(n1){
+            case 1:
+                alert("Boa jogador. Escolheu o número 1");
+                break;
+            case 2:
+                alert("Hmmm... escolheu o número 2, jogador");
+                break;
+            case 3:
+                alert("É isso ai... escolheu o número 3!");
+                break;
+            case 4:
+                alert("Número 4 escolhido. Tente de novo :)");
+                break;
+            case 5:
+                alert("Certo, escolheu o número 5. Bacana");
+                break;
+            default:
+                alert("Não disse que é pra escolher entre 1 e 5?! Porque escolheu outro, seu burro?!");
+
+        }
+
+
+    </script>
+</body>
+</html>
