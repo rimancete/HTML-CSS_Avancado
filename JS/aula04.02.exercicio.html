@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--setando evento "onclick" para executar função quando o botão for clicado-->
+    <!--NEW Setar os parâmetros que seráo tratados pela função JS-->
+    <button id="som" onclick="calcular('+')" style="visibility: hidden;">+</button>
+    <button id="sub" onclick="calcular('-')"style="visibility: hidden;">-</button>
+    <button id="mul" onclick="calcular('*')"style="visibility: hidden;">*</button>
+    <button id="div" onclick="calcular('/')"style="visibility: hidden;">/</button>
+    <div id="output"></div>
+    <script>
+        //1- solicitar um 'número' e armazenar em 'resultado'
+        var n1 = parseInt(prompt("Digite um número"));
+        var resultado = parseInt(n1);
+        /*2- Exibição: Apresentar 4 botões:
+        SOMA
+        SUBTRAÇÃO
+        MULIPLICAÇÃO
+        DIVISÃO
+        e exibir o 'resultado' no 'output'
+        */
+        document.getElementById("som").style.visibility = "visible";
+        document.getElementById("sub").style.visibility = "visible";
+        document.getElementById("mul").style.visibility = "visible";
+        document.getElementById("div").style.visibility = "visible";
+        escreve();
+
+        /**FUNÇÕES: 
+        3 - O cálculo correspondente será armazenado em 'resultado' e exibido no 'output'
+        */
+        function escreve(){
+            var output = document.querySelector("#output")
+            output.innerHTML = resultado;
+        }
+        /*NEW 4- Função para calcular para cada caso
+        */
+        function calcular(sinal){
+            var n2 = parseInt(prompt("Digite um número"));
+            
+            switch (sinal){
+                case "+":
+                resultado = resultado + n2;
+                break;
+                case "-":
+                resultado = resultado - n2;
+                break;
+                case "*":
+                resultado = resultado * n2;
+                break;
+                case "/":
+                resultado = resultado / n2;
+            }
+            escreve();
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--Setando evento "onclick" para executar função quando o botão for clicado-->
+    <!--NEW Setar os parâmetros que seráo tratados pela função JS-->
+    <button onclick="calcArea(x,y)">Mostrar Área</button>
+    <div id="output"></div>
+    <script>
+        //1- Solicitar a digitação da largura
+        var x = parseFloat(prompt("Digite a largura"));
+        //2- Solicitar a digitação da altura
+        var y = parseFloat(prompt("Digite a altura"));
+        /*3- No botão 'Mostrar Área', exibir o cálculo da área do retângulo
+        NEW 3.1- Passar os valores armazenados para a função entre os parenteses
+        */
+        function calcArea(x,y){
+          //3- Exibir o resultado do cálculo da área
+          alert("A área do retangulo é: "+ (x*y))
+          }
+       
+    </script>
+</body>
+</html>

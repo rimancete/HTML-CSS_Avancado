@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <script>
+        /*1- Mostrar todos os anos à partir de 1004 até 2017
+        pulando de 4 em 4 anos
+        */
+       var ano = parseInt(1004);
+       for (ano=1004;ano<=2017;/*ano=ano+4*/ano+=4){
+        if (ano % 100 !== 0 || ano % 400 === 0){
+        document.write(ano + " <br>");
+        }
+       }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--setando evento "onclick" para executar função quando o botão for clicado-->
+    <button onclick="mostrarTabuada()">Criar taboada</button>
+    <button onclick="limparTaboada()">Limpar taboada</button>
+    <div id="output"></div>
+    <script>
+        //1- NEW Criar função que será chamada no HTML
+        function mostrarTabuada(){
+          //NEW 2- Chamar função para criar a varíavel temporária e limpar a taboada
+          limparTaboada();
+          //NEW 3- Criar variavel temporária para armazenar a taboada
+          var msg="";
+          //4- Pedir para o usuário digitar um número
+          var n1 = parseInt(prompt("Digite um número"));
+          //5- Realizar o cálculo da taboada entre 1 a 1000 e armazenar a saída na variavel temporária
+          for (var i = 1; i<=1000; i++){
+              msg += n1 + " x " + i + " = " + n1*i + "<br>";
+              //6- SE o índice for múltiplo de 10, escreve uma divisória e armazena na varíavel temporária
+               if (i % 10 === 0){
+              msg += "<hr>";
+              }
+          }
+          //NEW  6- Inserir conteúdo da varíavel temporária no output da DIV
+          output.innerHTML = msg;
+        }
+
+        //NEW 6- Criar função que cria a varíavel temporária para armazenar a taboada e limpá-la
+        function limparTaboada(){
+            var msg = '';
+            output.innerHTML = msg;         
+        }
+        
+       
+    </script>
+</body>
+</html>

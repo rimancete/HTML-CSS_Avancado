@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--setando evento "onclick" para executar função quando o botão for clicado-->
+    <button id="som" onclick="somar()" style="visibility: hidden;">+</button>
+    <button id="sub" onclick="subtrair()"style="visibility: hidden;">-</button>
+    <button id="mul" onclick="multiplicar()"style="visibility: hidden;">*</button>
+    <button id="div" onclick="dividir()"style="visibility: hidden;">/</button>
+    <div id="output"></div>
+    <script>
+        //1- solicitar um 'número' e armazenar em 'resultado'
+        var n1 = parseInt(prompt("Digite um número"));
+        var resultado = parseInt(n1);
+        /*2- Exibição: Apresentar 4 botões:
+        SOMA
+        SUBTRAÇÃO
+        MULIPLICAÇÃO
+        DIVISÃO
+        e exibir o 'resultado' no 'output'
+        */
+        document.getElementById("som").style.visibility = "visible";
+        document.getElementById("sub").style.visibility = "visible";
+        document.getElementById("mul").style.visibility = "visible";
+        document.getElementById("div").style.visibility = "visible";
+        escreve();
+
+        /**FUNÇÕES: 
+        1 - O cálculo correspondente será armazenado em 'resultado' e exibido no 'output'
+        */
+        function escreve(){
+            var output = document.querySelector("#output")
+            output.innerHTML = resultado;
+        }
+
+        function somar(){
+            var n2 = parseInt(prompt("Digite um número"));
+            resultado = resultado + n2;
+            escreve();
+        }
+        function subtrair(n2){
+            var n2 = parseInt(prompt("Digite um número"));
+            resultado = resultado - n2;
+            escreve();
+        }
+        function multiplicar(n2){
+            var n2 = parseInt(prompt("Digite um número"));
+            resultado = resultado * n2;
+            escreve();
+        }
+        function dividir(n2){
+            var n2 = parseInt(prompt("Digite um número"));
+            resultado = resultado / n2;
+            escreve();
+        }
+        
+       
+    </script>
+</body>
+</html>

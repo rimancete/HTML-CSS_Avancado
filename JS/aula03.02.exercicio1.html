@@ -17,18 +17,27 @@
         var i = parseInt(1);
         var d;
         
-    /* Enquanto o índice for <=1000 faça a tabuada do número digitado,
+    /*2- Enquanto o índice for <=1000 faça a tabuada do número digitado,
     inserindo uma divisória a cada mudança de dezena*/
      for(i=1;i<=1000;i++){
          document.write(n1 + " x " + i + " = " + n1*i + "<br>");
-         // Identificando o último dígito do índice
+         //3- Identificando o último dígito do índice
          d = parseInt(i.toString().split('').pop());
-         // SE o último dígito for 0, escreve uma divisória
+         //4- SE o último dígito for 0, escreve uma divisória
             if (d == 0){
             document.write("<hr>");
             }
      }
      document.write("Saiu do loop");
+
+     /*TEACHER ANSWER
+     3- Se o índice for múltiplo de 10 e o resto da divisão for 0 E
+     o índice for maior que 0
+     escreve a divisória
+     if (i % 10 === 0 && i > 0){
+         document.write("<hr>");
+     }
+     */
     </script>
 </body>
 </html>
