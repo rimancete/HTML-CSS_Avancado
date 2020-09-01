@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--setando evento "onclick" para executar função quando o botão for clicado-->
+    <!--NEW Setar os parâmetros que seráo tratados pela função JS-->
+    <button id="som" onclick="iniciarCalculo('+')" style="visibility: hidden;">+</button>
+    <button id="sub" onclick="iniciarCalculo('-')"style="visibility: hidden;">-</button>
+    <button id="mul" onclick="iniciarCalculo('*')"style="visibility: hidden;">*</button>
+    <button id="div" onclick="iniciarCalculo('/')"style="visibility: hidden;">/</button>
+    <div id="output"></div>
+    <script>
+        /*
+        a) Primeiro número informado pelo usuário armazenado ao carregar a página
+        b) Ao clicar em algum botão, chamar 'iniciarCalculo'
+        */
+        
+        
+        //1- solicitar um 'número'
+        var n1 = parseInt(prompt("Digite um número"));
+        /*2- Exibição: Apresentar 4 botões:
+        SOMA
+        SUBTRAÇÃO
+        MULIPLICAÇÃO
+        DIVISÃO
+        e exibir o 'resultado' no 'output'
+        */
+        document.getElementById("som").style.visibility = "visible";
+        document.getElementById("sub").style.visibility = "visible";
+        document.getElementById("mul").style.visibility = "visible";
+        document.getElementById("div").style.visibility = "visible";
+        // NEW função 'escreve' recebe 'n1'
+        escreve(n1);
+        function iniciarCalculo(sinal){
+            //Receber o valor que está em 'output' no HTML. 'textcontent' é somente o texto puro, sem tags HTML
+            var n1 = parseFloat(document.querySelector("#output").textContent);
+            // Receber outro número pelo usuário
+            var n2 = parseFloat(prompt("Digite outro número"));
+            /* NEW Declarar variável para receber valores que serão calculados*/
+            var mensagem = calcular(sinal, n1, n2);
+            // Escrever no 'output' a saída
+            escreve(mensagem);
+        }
+        /**FUNÇÕES: 
+        3 - O cálculo correspondente será armazenado em 'resultado' e exibido no 'output'
+        Função 'escreve' tem 'msg' que recebeu 'resultado'. A 'msg' será exibida no 'output'
+        */
+        function escreve(msg){
+            var output = document.querySelector("#output")
+            output.innerHTML = msg;
+        }
+        /*NEW 4- Função para receber os números e calculá-los
+        */
+        function calcular(sinal, n1, n2){
+            var resultado = null;
+            switch (sinal){
+                case "+":
+                resultado = n1 + n2;
+                break;
+                case "-":
+                resultado = n1 - n2;
+                break;
+                case "*":
+                resultado = n1 * n2;
+                break;
+                case "/":
+                resultado = n1 / n2;
+            }
+            return resultado;
+        }
+       
+    </script>
+</body>
+</html>

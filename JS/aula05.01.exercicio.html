@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--Setando evento "onclick" para executar função quando o botão for clicado-->
+    <!--NEW Setar os parâmetros que seráo tratados pela função JS-->
+    <button onclick="mostrarArea()">Mostrar Área</button>
+    <div id="output"></div>
+    <script>
+    mostrarArea();
+    function mostrarArea(){
+        //1- Solicitar a digitação da largura
+        var x = parseFloat(prompt("Digite a largura"));
+        //2- Solicitar a digitação da altura
+        var y = parseFloat(prompt("Digite a altura"));
+        //3 - TENTE calcular a área, armazenando em 'area'
+        try{
+            var area = parseFloat(calcularArea(x,y));
+        }
+        //3.1 - Caso ERRO, exiba o erro e encerre a função sem escrever no 'output'
+        catch(e){
+            alert(e);
+            return;
+        }
+        escreve(area);
+    }
+    function escreve(a){
+        document.querySelector("#output").innerHTML = "A área total é: "+ a;
+    }
+    function calcularArea(x, y){
+        //4- Se os valores informados não forem números, trata o erro
+        if ((isNaN(x) || isNaN(y)) || (x === "" || y === "")){
+            throw new Error("Informe somente números!")
+        }
+        //4.1- Se não, retorna o cálculo realizado
+        else{        
+        var resultado = null;
+        resultado = x * y;
+        return resultado;
+        }
+    }
+    </script>
+</body>
+</html>
