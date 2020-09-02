@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <div id = 'output'></div>
+
+<script>
+    // armazena os dias da semana
+    var dias = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado');
+    // identificar o dia atual em que o usuário está exibindo a página
+    var hoje = new Date();
+    //criar variável que armazenará a 'msg' a ser exibida e fazer loop para identificar o dia atual
+    var msg = '';
+    for (var i = 0; i < dias.length; i++){
+        if (i === hoje.getDay()){
+            msg = 'Bem vindo, hoje é ' + dias[(i)];
+        }
+    }
+
+    /*TEACHER ANSWER
+    var diaSemana = hoje.getDay();
+    alert('Bem vindo, hoje é '+ dias[diaSemana]);
+    */
+    document.querySelector("#output").innerHTML = msg;
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <div id="output"></div>
+</body>
+<script>
+    var arr = new Array(25, 30, 45, 28, 'x', 'rs', 78);
+    //mostrar na tela a soma dos números pares da array
+    try{
+        somaOsPares(arr);
+    }
+    catch(e){
+        escreve(e)
+    }
+    
+    function somaOsPares(arr){
+        var soma = null;
+        for(var i = 0; i < arr.length; i++){
+        if (isNaN(arr[i])){
+            throw new Error("Há valores armazenados que NÃO são números");
+        }
+        else{
+            if (arr[i] % 2 === 0){
+                soma += arr[i];
+            }
+        }
+        escreve(soma);
+}
+    }
+    function escreve(soma){
+        document.querySelector("#output").innerHTML = 'A soma dos números pares é ' + soma;
+    }
+</script>
+</html>

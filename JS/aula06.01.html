@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <!--Setando evento "onclick" para executar função quando o botão for clicado-->
+    <div id="output"></div>
+    <script>
+        // criar variavel array armazenando os dados
+        var produtos = new Array('lapis', 'caneta', 'caderno', 'borracha', 'tesoura', 'livro');
+        produtos.push('cartolina', 'compasso');
+        // criar variável para exibir os dados com formatação
+        var msg = '';
+        /*criar loop(para cada índice do array,
+        considerando o total de valores do array,
+        e concatenar com textos da 'msg')
+        */
+        for (var i = 0; i < produtos.length; i++){
+            msg += 'produto '+ (i + 1) +': '+ produtos[i] +'<br>';
+        }
+        // exibir valores do array concatenados
+        document.querySelector('#output').innerHTML = msg;
+    </script>
+</body>
+</html>
