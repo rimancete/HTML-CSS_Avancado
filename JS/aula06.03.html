@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <div id="output"></div>
+</body>
+<script>
+    var produtos = [
+        {'nome': 'Mi9', 'preco': 1899.90, 'estoque': 10},
+        {'nome': 'Galaxy S20', 'preco': 2899.90, 'estoque': 20},
+        {'nome': 'iPhone S10', 'preco': 3899.90, 'estoque': 5}
+    ];
+    var msg ='';
+    for(var i = 0; i < produtos.length; i++){
+        msg += '<b>Produto</b> '+ produtos[i].nome +'<br><b>Estoque</b> <i>'+ produtos[i].estoque + '</i><br><b>Preço</b> R$ '+ produtos[i].preco + '<hr>';
+    }
+    document.querySelector('#output').innerHTML = msg
+</script>
+</html>
