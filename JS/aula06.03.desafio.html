@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Lógica de programação</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Aplicando javascript">
+    <meta name="keywords" content="html5, javascript, tecnologia">
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <button onclick="iniciarCompra(produtos)">Comprar</button>
+    <button onclick="reporEstoque(produtos)">Repor Estoque</button>
+    <button onclick="consultarEstoque(produtos)">Consultar Produtos</button>
+    <div id="output"></div>
+</body>
+<script>
+    /*  CONTROLE DE ESTOQUE DE PRODUTOS
+    Cadastrar 5 'produtos' (sexyshop) com controle de estoque.*/
+    var produtos = [
+        {'marca': 'HotFlowers','modelo': 'Hot Balls Esquenta & Esfria','estoque': 20, 'valor': 5.49},
+        {'marca': 'HotFlowers','modelo': 'Volumão','estoque': 5, 'valor': 9},
+        {'marca': 'Pimenta Sexy','modelo': 'Calcinha Renda Vermelha','estoque': 15, 'valor': 8.79},
+        {'marca': 'HotFlowers','modelo': 'Hot Balls 50 Tons Cinza','estoque': 5, 'valor': 10.49},
+        {'marca': 'Loka Sensaao','modelo': 'Pó Mágico da Bruxinha','estoque': 5, 'valor': 4.89}
+    ];
+    //lista todos os produtos ao abrir o sistema
+    listarProdutos(produtos);
+    function listarProdutos(prd){
+        var listarProdutos = '';
+        for(var i=0; i < prd.length;i++){
+            //se tiver estoque do produto, lista-o
+            if(prd[i].estoque > 0){
+            listarProdutos += "<b>Produto</b>: "+ (i+1) +"<br><b>Marca - Modelo </b>: "+ prd[i].marca +" - "+ prd[i].modelo +"<br><b>Quantidade em estoque</b>: "+ prd[i].estoque +"<br> <b>Valor </b>: R$ <b>"+ prd[i].valor+"</b><hr><br>";
+            }
+        }
+    //lista no 'output' os produtos
+    mostrarProdutos(listarProdutos);
+    }
+    //escreve a 'msg'    
+    function mostrarProdutos(msg){
+        document.querySelector("#output").innerHTML = msg;
+    }
+    
+    
+    function iniciarCompra(prd){
+        try{
+            comprar(prd);
+        }
+        catch(e){
+            alert(e);
+        }
+    }
+    
+    //BOTÕES E MANIPULAÇÃO DAS VARIÁVEIS
+    //1- Botão 'comprar' > Usuário escolhe o 'produto' e 'qtde' > Mostrar msg com o valor total da compra e ítens comprados
+    function comprar(prd){
+            //armazenar id do produto e qtde de ítens que deseja comprar
+            var idProduto = parseInt(prompt("Digite o número do produto")) - 1;
+            var qtdeItens = parseInt(prompt("Digite a quantidade que deseja comprar"));
+            //criar variavel que armazena parcial do estoque
+            var estoque = prd[idProduto].estoque - qtdeItens
+            
+            
+            //se 'estoque' for menor que 0, cria erro 'sem estoque'
+            if(estoque < 0){
+                throw new Error("Produto esgotado para a quantidade informada");
+            }
+            //se não, atualizar estoque do produto comprado
+            else{
+            prd[idProduto].estoque -= qtdeItens; 
+            //calcular valorcompra = valor do produto * qtde de ítens
+            var valorCompra = prd[idProduto].valor * qtdeItens;
+            //salvar dados('marca' e 'modelo') do produto comprado
+            var produtoComprado = 'Marca - Modelo: '+ prd[idProduto].marca +' - '+prd[idProduto].modelo;
+            }
+            /* chamar função para mostrar dados da compra confirmada
+            passando o valor total da compra, quantidade de ítens comprados e dados do produto escolhido
+            */
+            mostrarCompra(valorCompra, qtdeItens, produtoComprado);
+    }
+    //1.1- Exibe confirmação da compra e dados calculados
+    function mostrarCompra(compra,estoque,prdComprado){
+        document.querySelector("#output").innerHTML = '<h2>COMPRA CONFIRMADA</h2><br><b>Ítem</b>: <i>'+ prdComprado + '</i><br>Valor total da compra: R$ <b>'+ compra +'</b><br>Total de ítens comprado: <b>'+ estoque;
+    }
+    //2- Botão 'repor estoque' > Administrador da loja escolhe 'produto' e 'qtde' a repor> msg informa estoque atual do produto
+    function reporEstoque(prd){
+        //solicitar dados do produto a ser repoxto o estoque
+        var idProduto = parseInt(prompt("Digite o número do produto")) - 1;
+        var qtdeItens = parseInt(prompt("Digite a quantidade que deseja repor"));
+        //Atualizar estoque do produto estocado
+        prd[idProduto].estoque += qtdeItens;
+        // Salvar dados('marca' e 'modelo') do produto estocado
+        var produtoEstocado = '<b>Marca - Modelo</b>: '+ prd[idProduto].marca +' - '+prd[idProduto].modelo+'<br><b>Estoque atual</b>: '+ prd[idProduto].estoque;
+        //listar no 'output' o estoque atual do produto estocado
+        mostrarProdutos(produtoEstocado);
+    }
+
+    //3- Botão 'consultar produtos' > Consultar todos os produtos atualizados
+    function consultarEstoque(prd){
+        var listarProdutos = '';
+        for(var i=0; i < prd.length;i++){
+        listarProdutos += "<b>Produto</b>: "+ (i+1) +"<br><b>Marca - Modelo </b>: "+ prd[i].marca +" - "+ prd[i].modelo +"<br><b>Quantidade em estoque</b>: "+ prd[i].estoque +"<br> <b>Valor </b>: R$ <b>"+ prd[i].valor+"</b><hr><br>";
+        }
+        //lista no 'output' os produtos
+        mostrarProdutos(listarProdutos);
+    }
+
+</script>
+</html>
