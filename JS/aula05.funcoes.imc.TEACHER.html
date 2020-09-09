@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    <!--Adicionar código nas tags scripts-->
+    <script>
+    /*
+    1- OBJETIVO: Retorne o índice do IMC
+    1.1- Crie uma outra função que receba este índice e retorne uma string informando sua classificação
+    */
+    (function init(){
+        'use strict';
+        function imc(callback){
+        var peso = parseFloat(prompt('Informe seu peso(kg)'));
+        var altura = parseFloat(prompt('Informe sua altura(m)'));
+        var imc = peso / (altura*altura);
+        //NEW 1.2 - Se 'callback' foi passado e é uma 'function', passa o resultado de callback
+        if (callback && typeof callback === 'function'){
+            return callback(imc);
+        }
+        //NEW 1.3- Se não, retorna o 'imc' calculado anteriormente
+        return imc
+        }
+    //NEW callback - variável 'imc' recebe o resultado da função 'imc' passando a função que retorna a string
+    var imc = imc(classificacao);
+    /*NEW 'console.log('Cassificação IMC: ', imc)'
+    Apenas para verificar a saída sem o parametro,
+    no caso uma função, que retorna a string;
+    */
+        function classificacao(imc){
+                //entre 16 e 16.9 >
+                if (imc < 16){
+                    console.log('Você precisa ganhar peso');
+                }
+                else if(imc > 16 && imc <= 16.9)
+                console.log('Você está muito abaixo do peso ideal');
+                //entre 17 e 18.4
+                else if(imc <= 18.4){
+                    console.log('Você está um pouco abaixo do peso ideal');
+                }
+                //entre 18.5 e 24.9
+                else if(imc <= 24.9){
+                    console.log('Você está no peso ideal');
+                }
+                //entre 25 e 29.9
+                else if(imc <= 29.9){
+                    console.log('Você está acima do peso ideal');
+                }
+                //entre 30 e 34.9
+                else if(imc <= 34.9){
+                    console.log('Você está obeso grau I');
+                }
+                //entre 35 e 40
+                else if(imc <= 40){
+                    console.log('Você está obeso grau II');
+                }
+                //acima de 40
+                else{
+                    console.log('Você está obeso grau III');
+                }
+        }
+    
+    })();
+    </script>
+</head>
+<body>
+    <h1>Curso Programação Javascript - Fundamentos</h1>
+</body>
+
+</html>

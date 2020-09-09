@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    <!--Adicionar código nas tags scripts-->
+    <script>
+       console.log('testando meu código');
+       var n1 = parseInt(prompt('digite um número'));
+       escreve(n1);
+       function escreve(num){
+           /* Pausando a execução para inspeção
+           debugger;
+           */
+           console.log('-------');
+           console.log(num);
+       }
+       function calcular(simbolo){
+           var n = parseInt(prompt('digite outro número'));
+            switch(simbolo){
+                case '+':{
+                    n1 += n;
+                    break;
+                }
+                case '-':{
+                    n1 -= n;
+                    break;
+                }
+                case '*':{
+                    n1 *= n;
+                    break;
+                }
+                case '/':{
+                    n1 /= n;
+                }
+            }
+            escreve(n1);
+       }
+        
+    </script>
+</head>
+<body>
+    <h1>Curso Programação Javascript - Fundamentos</h1>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+    <div id="output"></div>
+</body>
+
+</html>

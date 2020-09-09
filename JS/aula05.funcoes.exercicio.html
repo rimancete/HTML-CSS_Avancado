@@ -9,10 +9,22 @@
     <meta name="keywords" content="html5, css, javascript, tecnologia">
     <!--Adicionar código nas tags scripts-->
     <script>
-    
+    /*
+    calcular média de números passados por parâmetro*/
+    (function init(){
+    'use strict';
+    function media(){
+       var media = parseFloat(0);
+       var i = 0;
+       for(i = 0; i < arguments.length; i++){
+        media += arguments[i];
+       }
+       media = media/i;
+       console.log('A média é: ', media);
+    }
+    media(4, 0, 10, 10);
+   })();
     </script>
-    <!--Adicionar arquivo javascript-->
-    <script src="qualquer.js"></script>
 </head>
 <body>
     <h1>Curso Programação Javascript - Fundamentos</h1>
