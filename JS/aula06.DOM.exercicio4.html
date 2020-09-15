@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    <!--Adicionar código nas tags scripts-->
+    <!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <h1>Curso Programação Javascript - Fundamentos</h1>
+    <input type="text" id="txtNome" value="Clique abaixo para informar nome e sobrenome">
+    <button id="welcome" onclick="escreve()">Nome e sobrenome</button>
+    <script>
+        /*Usuário informa 'nome' e 'sobrenome' que serão concatenadas em um input type text,
+        deixando esse input desabilitado
+        */
+
+       //Criar varíavel global que armazena a referência ao input
+       var txtNome = document.querySelector('#txtNome');
+       function escreve(){
+            var nome = prompt('Informe seu nome');
+            var sobrenome = prompt('Informe seu sobrenome')
+            var nomeCompleto = nome +' '+ sobrenome;
+            txtNome.value = nomeCompleto;
+            document.getElementById('txtNome').disabled = 'true';
+        }
+            
+               
+    </script>
+</body>
+
+</html>

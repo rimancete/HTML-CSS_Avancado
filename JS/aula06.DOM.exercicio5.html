@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <!--Inserindo div para formatação do h1-->
+    <div class="container">
+        <h1>Curso Programação Javascript - Fundamentos</h1>
+    </div>
+    <!--Construindo tabela de alunos-->
+    <div class="container">
+        <h2>Médias dos alunos</h2>
+        <!--classe 'js-tabela' criada para identificar que está relacionada ao javascript e não a formatação (CSS)'-->
+        <table class="table js-tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Nota 4</th>
+                    <th>Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="aluno">
+                    <td class="aluno-nome">Gertrude</td>
+                    <td class="n1">10</td>
+                    <td class="n2">8.5</td>
+                    <td class="n3">9</td>
+                    <td class="n4">7.5</td>
+                    <td class="media"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Rayane</td>
+                    <td class="n1">2</td>
+                    <td class="n2">7.5</td>
+                    <td class="n3">6</td>
+                    <td class="n4">3</td>
+                    <td class="media"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Osvaldo</td>
+                    <td class="n1">6</td>
+                    <td class="n2">9</td>
+                    <td class="n3">7.5</td>
+                    <td class="n4">9.5</td>
+                    <td class="media"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Davi</td>
+                    <td class="n1">7.5</td>
+                    <td class="n2">8</td>
+                    <td class="n3">5.5</td>
+                    <td class="n4">3.5</td>
+                    <td class="media"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Roberto</td>
+                    <td class="n1">2.5</td>
+                    <td class="n2">6</td>
+                    <td class="n3">8</td>
+                    <td class="n4">4</td>
+                    <td class="media"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Domingos</td>
+                    <td class="n1">1.5</td>
+                    <td class="n2">6</td>
+                    <td class="n3">4</td>
+                    <td class="n4">5</td>
+                    <td class="media"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        /*Problema à resolver:
+        À partir de uma tabela de alunos, calcular a média de 4 notas de cada aluno
+        PS: Utilizei 6 alunos na tabela
+        OBS: Criar biblioteca com a função para calculo de média
+        */
+
+    (function(){
+        //NEW criar variavel que armazena a qtde de TRs(qtde de alunos)
+        var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+        //criar loop para percorrer cada TR(aluno)
+        var i = parseInt(0);
+        for (i = 0; trs[i]; i++){
+            // criar variavel 'media' que recebera resultado da função que retornará o calculo da média do aluno atual(trs[i])
+            var media = calculaMedia(trs, i);
+            //escrever a 'media' na célula que trárá o resultado do cálculo
+            trs[i].querySelector('.media').textContent = media;
+        }
+        function calculaMedia(trs, i){
+                /*Após receber o array contento os dados de todos as TRs(alunos)
+                e o valor do índice do loop anterior(i),
+                criar variável temporária que receberá o valor convertido(string para float) da primeira nota(n1)
+                do aluno atual(trs[i])
+                */
+                var result = parseFloat(trs[i].querySelector('.n1').textContent);
+                //somar, ao valor da primeira nota, as notas seguintes
+                result += parseFloat(trs[i].querySelector('.n2').textContent);
+                result += parseFloat(trs[i].querySelector('.n3').textContent);
+                result += parseFloat(trs[i].querySelector('.n4').textContent);
+                //retornar o cálculo da média
+                return result / 4;
+        
+        }
+    })()
+               
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    <!--Adicionar código nas tags scripts-->
+    <!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <h1>Curso Programação Javascript - Fundamentos</h1>
+    <input type="text" id="txtNome" value="Digite seu nome">
+    <button id="welcome" onclick="escreve()">Boas vindas</button>
+    <div id="msg"></div>
+    <script>
+        /*Mostra na tela(div 'msg') uma mensagem  de boas vindas ao usuário
+        (nome informado pelo usuário em negrito em um input text)
+        */
+
+
+
+       //NEW criar varíavel global que armazena a referência ao input
+       var txtNome = document.querySelector('#txtNome');
+       function escreve(){
+            if (txtNome.value !== "Digite seu nome"){
+            var nome = txtNome.value;
+            document.querySelector('#msg').innerHTML = 'Bem vindo, <b>' + nome +'</b>';        
+            }
+            else{
+                document.querySelector('#msg').innerHTML = '<b>Por favor, digite um nome</b>';        
+            }
+        }
+            
+               
+    </script>
+</body>
+
+</html>
