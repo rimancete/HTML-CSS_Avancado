@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+ <div class="container">
+     <hi>Curso Javascript</hi>
+ </div>
+<script>
+    var hoje = new Date();
+    var x = [0];
+    function mudaArr(x){
+        var y = x;
+        y.push(2);
+        x.push(3);
+    }
+    mudaArr(x);
+    console.log('-------');
+
+    var n = 0;
+    function mudaN(n){
+        var n2 = n;
+        console.log(++n2);
+    }
+    mudaN(n);
+    console.log(n);
+    
+    console.log('__________');
+
+    function mudarCor(cor){
+        console.log(this);
+        this.cor = cor;
+    }
+    var caneta1 = {
+        cor: 'red',
+        preco: 1,
+        mudarCor: mudarCor
+    }
+    var caneta2 = {
+        cor: 'green',
+        preco: 2,
+        mudarCor: mudarCor
+    }
+    
+    caneta1.mudarCor('green');
+    console.log(caneta1);
+    console.log(caneta2);
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+ <div class="container">
+     <h1>Curso Javascript</h1>
+ </div>
+<script>
+    /*Temos 3 objetos
+   Cada um tem duas propriedades('nome' e 'sobrenome')
+   Mostrar no console o nome completo de cada um deles
+   */
+   //criar objetos com propriedades e valores
+   var pessoa1 = {
+        nome: 'Osvaldo',
+        sobrenome: 'Costa'
+    }
+    var pessoa2 = {
+        nome: 'Rayane',
+        sobrenome: 'Araújo'
+    }
+    var pessoa3 = {
+        nome: 'Pedro',
+        sobrenome: 'Miguel'
+    }
+    mostraNomes();
+    function mostraNomes(){
+        for (var i = 1;i <= 3; i++){
+            console.log(window["pessoa"+i].nome + ' ' + window["pessoa"+i].sobrenome)
+        } 
+}
+   
+    
+</script>
+</body>
+
+</html>

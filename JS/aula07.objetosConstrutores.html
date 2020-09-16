@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+ <div class="container">
+     <h1>Curso Javascript</h1>
+ </div>
+<script>
+   //criar varíavel que recebe o resultado da função construtora dentro da IEEF
+   var Caneta = (function(window){
+    //Entre outros, resolvo a questão de função construtora poder ser criada sem o operador 'new'
+    'use strict';
+    // Nota: O 'this' está em escopo local e não pode chegar no 'window'
+    console.log(this);
+    //criando funções construtora em escopo global
+    function Caneta(preco, cor){
+        //definir propriedades e valores que serão criados
+        //o 'this' se referência ao novo objeto que está sendo criado
+        this.preco = preco || 1;
+        /*NEW Para deixar a propriedade 'cor' invisível
+        criar varíavel que recebe o parâmetro 'cor' ou um valor padrão e
+        */
+        var color = cor || 'black';
+        /*Criar Método: No caso, a função que recebe o parâmetro 'cor'
+        e altera o valor da varíavel interna "color"
+        com o parâmetro
+        */
+        this.mudaCor = function(cor){
+            //Validação: se a cor for diferente das padrões, considerar inválido
+            if (cor !== "red" && cor !== "blue" && cor !== "black"){
+                //retorna nada
+                return;
+            }
+            color = cor;
+        }
+        //NEW criar método que recebe uma função que retorna o valor de 'color'
+        this.pegaCor = function(){
+            return color;
+        }
+    }
+    return Caneta;
+    })(window)
+    
+    
+</script>
+</body>
+
+</html>
