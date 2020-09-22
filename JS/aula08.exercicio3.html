@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <textarea class='txtMsg'name='mensagem' maxlength="60" rows="3" cols="20"></textarea>
+    <div id="alerta-container" style="display: none;"><span id="alerta"></span></div>
+<script>
+   /*No textarea, com número máximo de caracteres permitidos,
+   mostrar numa span o número de caracteres restantes
+   e inidicar pro usuário quando restarem 10 caracteres
+   */
+  
+    (function(){
+        'use strict';
+        //referenciar o textarea e a span
+        var $txtMsg = document.querySelector('.txtMsg');
+        var $alerta = document.getElementById('alerta');
+        //progressive enhancement: se tiver js disponível na página, referenciar a div contendo o 'alerta'(span)
+        var $alertaContainer = document.getElementById('alerta-container');
+        //chamar função que mostra o container do 'alerta'
+        mostrarContainerAlerta($alertaContainer);
+        function mostrarContainerAlerta(divAlerta){
+            //Exibir a div do 'alerta'
+            divAlerta.style.display = 'block';
+        }
+        //escuta a cada input no textarea
+        $txtMsg.addEventListener('input', function(){
+        //calcula a qtde de caracteres restantes
+        var result = parseInt($txtMsg.maxLength - $txtMsg.textLength);
+        // chamo a função que mostra os caracteres restantes
+        mostrarCharRestantes(result);
+        //criar função que mostra os caracteres restantes
+        function mostrarCharRestantes(result){
+                if (result <= 10){
+                    $alerta.innerHTML = 'Restam apenas <b>'+ result +'</b> carateres restantes';
+                }
+                else{
+                    $alerta.innerHTML = ($txtMsg.textLength) +' caracteres digitados';
+                }
+        }
+        
+        });
+    })()
+</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+        <input id='btn1' type="submit" value="Botão 1">
+        <input id='btn2' type="submit" value="Botão 2">
+        <input id='btn3' type="submit" value="Botão 3">
+<script>
+   /*Atrelar eventos de click numa coleção de botões
+   que ao ser clicado mostra no console o textContent do próprio botão
+   */
+  
+  (function(){
+    'use strict'
+    /*criar função para percorrer na página em busca de botões
+    e armazena, em um array, os botões da página
+    */
+    function allButtons(){
+      //criar array que armazenará todos os botões
+      var $allButtons = [];
+      //criar objeto que armazenará cada botão
+      var $buttons = {};
+      //enquanto houver botão
+      for (var i = 0; document.getElementById('btn'+(i+1));i++){
+        //armazena o botão na varíavel de objetos
+        $buttons = document.getElementById('btn'+(i+1));
+        //adiciona no array o botão
+        $allButtons.push($buttons);
+      }
+    return $allButtons;
+    }
+    //criar variável que recebe a função que localiza e armazena, em array, todos os botões da página
+    var $allButtons = allButtons();
+    //chamar função que escreve o 'value' de todos os botões
+    buttonValue($allButtons);
+    
+    //criar função que escreve o 'value' de todos os botões disponíveis na página
+    function buttonValue($allButtons){
+        //enquanto houver botões
+        for (var i = 0; $allButtons[i];i++){
+            //escuta o clique e escreve seu 'value'
+            $allButtons[i].addEventListener('click', function(){
+                console.log(this.value)
+                console.log('---------');
+            })
+        }
+
+    }
+  })()
+  
+    
+</script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <form action="#" method="POST" class="formLogin">
+        <fieldset>
+        <legend>Dados pessoais</legend>
+        <label>Email</label>
+        <input type="email" required maxlength="50" placeholder="Digite um e-mail válido">
+        <br>
+        <label>Numéro de filhos</label>
+        <input type="number" min="0" max="1000" step="1">
+        <br>
+        <label>Data de Nascimento</label>
+        <input type="date" min="1920-01-01" max="2020-01-30">
+        <br>
+        <p>Sexo:</p>
+        <label>
+            Masculino
+            <input type="radio" name="sexo" value="M">
+        </label>
+        <label>
+            Feminimo
+            <input type="radio" name="sexo" value="F">
+        </label>
+        <br>
+        <input type="hidden" name="expira" value="2018-12-30">
+        <label>Estado</label>
+        <select name="estado">
+            <option value="o">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Área de Interesse</legend>
+        <label><input type="checkbox" name="html" value="html">HTML</label>
+        <label><input type="checkbox" name="css" value="css">CSS</label>
+        <label><input type="checkbox" name="js" value="js">Javascript</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Contrato</legend>
+        <textarea id='txtContrato' style="resize: none" name="contrato" cols="50" rows="50" disabled>
+            CONTRATO DE PRESTAÇÃO DE SERVIÇOS PROFISSIONAIS
+
+            Pelo presente instrumento particular, XXXXXXXXXX CGC XXXXXXXXXX estabelecida XXXXXXXXXX, e aqui denominada CONTRATADA e XXXXXXXXXX, CPF/CGC: XXXXXXXXXX, RG/IE: XXXXXXXXXX, estabelecido a XXXXXXXXXX, aqui denominado CONTRATANTE, têm entre si justo e contratado o seguinte:
+            
+             
+            I – DO OBJETO DO CONTRATO
+            O presente contrato tem como objeto a formulação do conjunto de páginas eletrônicas e gráficas, aqui denominado simplesmente por ”SITE” ou "HOME PAGE", para uso exclusivo na Internet, com referência institucionais da CONTRATANTE, demostrando os seus produtos, serviços e tecnologia. Também incluso a prestação de serviço referente a manutenção deste “SITE”.
+            
+             
+            II - DAS OBRIGAÇÕES DA CONTRATADA 
+            
+            A CONTRATRADA se obriga a desenvolver o objeto deste contrato da maneira mais adequada e dinâmica, dando ênfase a marca e a qualidade dos produtos e serviços da CONTRATANTE. 
+            
+            Faz parte ainda os seguintes serviços a serem executados pela CONTRATADA: 
+            
+            - Elaboração do projeto gráfico e fluxo das informações; 
+            
+            - Programação das páginas em HTML; 
+            
+            - Programação das páginas em ASP; 
+            
+            - Programação dos bancos de dados necessários; 
+            
+            - Manutenção do “SITE” assim que as partes acharem necessário. 
+            
+            III - DAS OBRIGAÇÕES DO CONTRATANTE 
+            
+            Ficará sobre responsabilidade da CONTRATANTE, a entrega de todo o material necessário para execução dos trabalhos ora tais como: 
+            
+            - Fotos e imagens a serem adicionadas nas páginas; 
+            
+            - Textos descritivos; 
+            
+            - Logotipo. 
+            
+            O CONTRATANTE deverá efetuar corretamente os pagamentos à CONTRATADA, segundo item V. 
+            
+            IV - DA MANUTENÇÃO DOS SERVIÇOS 
+            
+            A CONTRATADA através da manutenção dos serviços, sendo Preventivo e/ou Corretivo, manterá o “SITE” em condições de navegabilidade, efetuando os necessários ajustes, configurações e reparos visuais. 
+            
+            1º. Somente os técnicos da CONTRATADA poderão executar serviços técnicos preventivos e ou corretivos, a que se refere esta cláusula. 
+            
+            2º. A manutenção dos serviços aqui contratados não incluem: 
+            
+            - Os serviços adicionais aos mencionados neste contrato; 
+            
+            - Elaboração e construção de bancos de dados extras; 
+            
+            - Produção de fotos; 
+            
+            - Produção de vídeos; 
+            
+            - Configuração de estação de usuário da Internet; 
+            
+            - Problemas apresentados nos equipamentos de comunicação, tais como modems e cabos de redes; 
+            
+            - Problemas apresentados em conseqüência da presença de vírus no equipamento; 
+            
+            - Problemas apresentados em conseqüência de software defeituosos, mal instalados ou mal configurados; 
+            
+            - Criação de novas páginas ou alterações de layout diferenciado para o “SITE” do CONTRATANTE; 
+            
+            - Problemas que não estão ligados diretamente à XXXXXXXXXX(nome da empresa contratada). 
+            
+            3º. A CONTRATADA se reserva no direto de inserir uma pequena imagem de aproximadamente 70x40 pixels na página principal da CONTRATANTE com a seguinte descrição: "XXXXXXXXXX". 
+            
+            4º. A CONTRATADA se compromete a cadastrar o "SITE" do CONTRATANTE nos principais "SITES" de busca nacionais e internacionais. 
+            
+            V - PREÇO E FORMA DE PAGAMENTO 
+            
+            Para os serviços de construção, manutenção e inclusão do “SITE”, objeto deste contrato, ora estipulado terá um custo no valor de: 
+            
+            - Construção: R$ XXXXXXXXXX 
+            
+            - Uma vez que a CONTRATADA cumpra todos os requisitos, o CONTRATANTE efetuará o pagamento do serviço prestado de construção do “SITE” da seguinte forma: 
+            
+            - (forma de pagamento) 
+            
+            - Manutenção: R$ XXXXXXXXX, a serem pagos da seguinte forma: 
+            
+            - (forma de pagamento) 
+            
+            VI - DA RESCISÃO DO CONTRATUAL 
+            
+            O presente contrato poderá ser rescindido pelo CONTRATANTE, sem ônus algum, quando: 
+            
+            - A CONTRATADA não executar os serviços solicitados pelo CONTRATANTE, e que estejam de acordo com as cláusulas deste contrato. 
+            
+            - Quando a CONTRATADA descumprir alguma das cláusulas deste contrato. 
+            
+            O presente contrato poderá ser rescindido pela CONTRATADA, quando: 
+            
+            - O CONTRATANTE na hipótese de inadimplência das obrigações ora assumidas, devendo a parte inocente notificar a parte culpada à sanar sua falha no prazo de 30 dias, após isso, não sanada a dívida, a CONTRATADA não efetuará qualquer tipo de trabalho para o CONTRATANTE. 
+            
+            VII - PRAZO DE VIGÊNCIA DO PRESENTE CONTRATO 
+            
+            Com exceção dos serviços de implantação do sistema o presente contrato vigorará por prazo determinado de 1 (um) ano, podendo ser renovado posteriormente. 
+            
+            E, por assim estarem justos e contratados, firmam o presente contrato em duas vias de igual teor e forma.
+        </textarea><br>
+        <label><input id="checkContrato" type="checkbox" checked>Li e aceito</label>
+    </fieldset>
+        <br>
+        <input id='btnEnviar' type="submit" value="Enviar">
+        <input type="reset" value="Limpar Formulário">
+</form>
+<script>
+   /*Permitir o envio de um formulário somente após o usuário aceitar os termos de contrato.
+   Para esse exemplo, vamos habilitar ou desabilitar o botão dependendo do checkbox.
+   */
+  
+    (function(){
+        //criar referência para o check do contrato
+        var $checkContrato = document.getElementById('checkContrato');
+        //criar referência para o botão 'enviar'
+        var $btnEnviar = document.getElementById('btnEnviar');
+        //chama função que desabilita/habilita o botão
+        displaySendButton();
+
+        //criar função que desabilita o botão enviar se o check não estiver marcado
+        function displaySendButton(){
+            $btnEnviar.disabled = !$checkContrato.checked;
+        }
+        //escuta a cada checked no aceite do contrato
+        $checkContrato.addEventListener('change', function(e){
+        displaySendButton();
+            // //MINHA SOLUÇÃO: verifica se o check do contrato está checado
+        //     if (!this.checked){
+        //         // evita o envio do formulário
+        //         $btnEnviar.disabled = true;
+        //         e.preventDefault();
+        //     }
+        //     else{
+        //         //habilita o botão de envio
+        //         $btnEnviar.disabled = false;
+        //         //escuta a cada click no botão 'enviar'
+        //         $btnEnviar.addEventListener('click', function(e){
+        //         //verifica se o check do contrato está checado
+        //         //envia o formulário
+        //         alert('Formulário enviado');    
+        //         });
+        //     }
+        
+    });
+    })()
+        
+
+</script>
+</body>
+
+</html>

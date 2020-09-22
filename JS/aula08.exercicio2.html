@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <form action="#" method="POST" class="formLogin">
+        <fieldset>
+            <legend>Log-in</legend>
+            <label for='txtUser' >Nome de usuário</label>
+            <input class='txtUser' type="text" name='user' maxlength="50" placeholder="Digite seu nome de usuário">
+            <br>
+            <label for='txtPass' >senha</label>
+            <input class='txtPass' type="password" name='user'  maxlength="8" placeholder="Digite sua senha">
+            <br>
+            <input class='login' type="submit" name="login" value="Login">
+       </fieldset>
+       
+    
+<script>
+   /*validar um formulário de login(user/password)
+   no submit do formulário
+   Se tiver algum campo vazio
+   mostrar um alert e impedir o envio
+   */
+  var $btnLogin = document.querySelector('.login');
+  var $user = document.querySelector('.txtUser');
+  var $pass = document.querySelector('.txtPass');
+  //NEW cria a referência para o formulário
+  var $form = document.querySelector('form');
+  // NEW O objeto '$form' executará as validações no evento 'submit'
+  $form.addEventListener('submit', function(e){
+    if ($user.value !== '' && $pass.value !== ''){
+        alert($user.value + ', você está logado');
+    }
+    else {
+        alert('Por favor preencher todos os campos. Tente novamente')
+        //NEW impedir o envio do formulário
+        e.preventDefault();
+    }
+  })
+</script>
+</body>
+
+</html>

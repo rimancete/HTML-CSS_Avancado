@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+    <textarea class='txtMsg'name='mensagem' maxlength="60" rows="3" cols="20"></textarea>
+    <br>
+    <span id="alerta"></span>
+<script>
+   /*No textarea, com número máximo de caracteres permitidos,
+   mostrar numa span o número de caracteres restantes
+   e inidicar pro usuário quando restarem 10 caracteres
+   */
+  (function(){
+  var $txtMsg = document.querySelector('.txtMsg');
+  var $alerta = document.getElementById('alerta');
+//escuta a cada 'input' de dados no textarea
+$txtMsg.addEventListener('input', function(){
+//calcula a qtde de caracteres restantes
+var result = $txtMsg.maxLength - $txtMsg.textLength;
+        if (result <= 10){
+            $alerta.innerHTML = 'Restam apenas '+ result +' carateres restantes';
+        }
+        else{
+            $alerta.innerHTML = $txtMsg.textLength +' caracteres digitados';
+        }
+});
+  })()
+
+</script>
+</body>
+
+</html>
