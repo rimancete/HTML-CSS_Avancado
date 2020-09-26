@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: #555;
+        }
+    </style>
+    
+</head>
+<body>
+        <input id='txtTask' type="text" placeholder="Digite uma tarefa" maxlength="200">
+        <button id='btnSave' disabled>Add Task</button>
+        <br><br>
+        <h1>Task List</h1>
+        <ul>
+            <li>DayTrade - Operar entre 05h e 08h30min</li>
+            <li>Estudar javascript entre 09h e 14h</li>
+            <li>Poker - Jogar/treinar entre 16h e 22h</li>
+        </ul>
+        
+<script>
+   /*1- Fazer uma pequena lista de tarefa
+   onde o usuário pode acrescentar um novo ítem(li) na lista(ul)
+   através de um input e um botão.
+   Esta lista deve estar preenchida previamente com três ítens quaisquer.
+   2- Acrescentar eventos de click em cada li para marcar como feito
+   */
+  (function(){
+    var $ul = document.querySelector('ul');
+    var $lis = $ul.querySelectorAll('li');
+    var $txtTask = document.getElementById('txtTask');
+    var $btnSave = document.getElementById('btnSave');
+  
+    //colocar foco no input
+    $txtTask.focus();
+    //chamar função que verificar se tiver texto no input, habilita o botão
+    checkTxtValue();
+
+    //NEW - escuta a tecla que foi pressionada
+    $txtTask.addEventListener('keyup', function(e){
+                //se for ENTER, chama a função que que adiciona a tarefa
+                if (e.keyCode === 13 && $txtTask.value !== ''){
+                    addTask();
+                }
+        })
+    
+    /*Ao clicar no botão
+    lê o texto do input
+    e adicionar na ul(como li), limpa o conteúdo do input, volta o foco no input
+    */
+    $btnSave.addEventListener('click',addTask);
+    function addTask(){
+        //NEW - Criar elemento(objeto 'li')
+        var li = document.createElement('li');
+        //NEW criar conteúdo para essa 'li' contendo a própria lista
+        var text = document.createTextNode($txtTask.value)
+        //NEW Inserir 'text' na li
+        li.appendChild(text)
+        //NEW acrescentar li "solta" à ul que já está na página(acrescentar ao DOM)
+        $ul.appendChild(li)
+        //COM A OTIMIZAÇÃO DO LISTENER NÃO SERÁ ACRESCENTADO LI NO DOM
+        //NEW chamar função que adicionará as refẽncias atuais das lis ao DOM
+        // addEvent(li);
+        $txtTask.value = '';
+        $txtTask.blur();
+        $txtTask.focus();
+        checkTxtValue()
+    };
+    function checkTxtValue(){
+        //a cada entrada no input
+        $txtTask.addEventListener('input',function(){
+        //escuta se o input está em foco
+        $txtTask.addEventListener('focus',function(){
+            
+            //o botão é ativado conforme boleano de seu value
+            $btnSave.disabled = Boolean(!$txtTask.value);   
+        })
+        //se o input não tiver em foco, o botão é ativado conforme boleano de seu value
+        $btnSave.disabled = Boolean(!$txtTask.value);
+        })
+    };
+    /*NEW5 - escutar o clique na ul, chamando função anonima que identifica qual li foi clicada
+    */
+    $ul.addEventListener('click', function(e){
+        //se o target for li
+        if (e.target.nodeName === 'LI'){
+            //chama função que marca/desmarca a li identificada como feito
+            taskDone(e.target)
+        }
+    });
+
+    function taskDone(li){
+        li.classList.toggle('done');
+    }
+
+    // COM A OTIMIZAÇÃO DO LISTENER O DOM NÃO SERÁ ACRESCENTADO PELA LI
+    /*NEW Função que adiciona referência das lis atuais ao DOM
+    // e escuta seus cliques chamando função para marcar como feita
+    // */
+    // function addEvent(li){
+    //     li.addEventListener('click', taskDone); 
+    // }
+  })()
+  
+</script>
+</body>
+
+</html>

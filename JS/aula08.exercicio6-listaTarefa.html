@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <!--inserindo bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--Inserindo biblioteca js-->
+    <script src="beluga.js"></script>
+    <title>Curso Programação Javascript</title>
+    <meta name="author" content="Osvaldo Costa">
+    <meta name="description" content="Página base para estudo e prática de programação">
+    <meta name="keywords" content="html5, css, javascript, tecnologia">
+    
+</head>
+<body>
+        <input id='txtTask' type="text" placeholder="Digite uma tarefa" maxlength="100">
+        <button id='btnSave' disabled>Adicionar tarefa</button>
+        <br><br>
+        <div class='container tarefas'>Lista de Tarefas</div>
+        
+<script>
+   /*Fazer uma pequena lista de tarefa
+   onde o usuário pode acrescentar um novo ítem(li) na lista(ul)
+   através de um input e um botão.
+   Esta lista deve estar preenchida previamente com três ítens quaisquer.
+   Acrescentar eventos de click em cada li para marcar como feito
+   */
+  
+   /*- 1 Criar HTML(input text, button, div da lista completa)
+   2- Criar lista: Verificar estoque de produtos/Lição Davi/Ir para Academia
+  */
+ (function(){
+'use strict';
+//1-criar referências para input text, botão e div 
+var $txtTask = document.getElementById('txtTask');
+var $btnSave = document.getElementById('btnSave');
+var $tasksList = document.getElementsByClassName('tarefas');
+//1.1- Criar array com a lista
+var $allTasks = ['Verificar estoque de produtos',
+    'Lição Davi',
+    'Ir para Academia'
+]
+//1.2 - Escuta a cada input no input text e chama função para verificar se tem texto no input para ativar o botão
+$txtTask.addEventListener('input',btnActive);
+//1.2.1 - Função que ativa / desativa botão conforme texto no input
+function btnActive(){
+    //se tiver caracter no input habilita o botão
+    $btnSave.disabled = Boolean(!$txtTask.value)
+}
+
+//TASK 2 - listar as tarefas em ul li
+//2 - Exibir cada array em uma li dentro de uma ul
+
+//adicionar na div, função que concatenará lista
+$tasksList[0].innerHTML += '<br><br><ul>'+concatenaTarefas()+'</ul>';
+function concatenaTarefas(){
+    //criar variavel que chama função para armazenar a concatenação da lista
+    var lista ='';
+    //enquanto houver lista, insere cada ítem na li
+    for (var i = 0; $allTasks[i]; i++){
+        lista += '<li>'+ $allTasks[i] + '</li>'
+    }
+    return lista;
+}
+/*escuta a cada clique na li,
+chamando função que marca e desmarca a tarefa(li)
+tachando(s) o conteúdo da li
+*/
+
+console.log($tasksList[0].getElementsByTagName('li')[0]);
+$tasksList[0].getElementsByTagName('li')[0].addEventListener('click', taskDone(0))
+$tasksList[0].getElementsByTagName('li')[1].addEventListener('click', taskDone(1))
+$tasksList[0].getElementsByTagName('li')[2].addEventListener('click', taskDone(2))
+//enquanto houver li
+for (var i = 0; Boolean($tasksList[0].getElementsByTagName('li')[i]); i++ ){
+    //CORRIGIR COMO IDENTIFICAR O CLIQUE: escuta o clique na li e chama a função que marcará o conteúdo com <s> passando o indíce(i)
+    $tasksList[0].getElementsByTagName('li')[i].addEventListener('click', taskDone(i));
+}
+function taskDone(i){
+    //substitui o conteúdo da li referida por ele mesmo adicionado à tag s
+
+    $tasksList[0].getElementsByTagName('li')[i].innerHTML ='<s>' + $tasksList[0].getElementsByTagName('li')[i].innerHTML +'</s>' ;
+}
+
+ })()
+</script>
+</body>
+
+</html>
